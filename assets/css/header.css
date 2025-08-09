@@ -1,0 +1,834 @@
+@charset "UTF-8";
+.btn_reserv,
+.btn_recruit {
+  width: 100%;
+  max-width: 335px;
+  height: 80px;
+  background-color: rgba(216, 140, 50, 0.2);
+  border-radius: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 0;
+}
+.btn_reserv::before,
+.btn_recruit::before {
+  content: "";
+  display: block;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: #D88C32;
+  border-radius: 40px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: -1;
+}
+.btn_reserv::after,
+.btn_recruit::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #FFCD6A;
+  border-radius: 45px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: scale(0);
+}
+.btn_reserv > *,
+.btn_recruit > * {
+  pointer-events: none;
+}
+.btn_reserv svg,
+.btn_recruit svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  fill: currentColor;
+}
+@media (min-width: 768px ) {
+  .btn_reserv,
+.btn_recruit {
+    font-family: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+@media (max-width: 767px ) {
+  .btn_reserv,
+.btn_recruit {
+    font-family: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
+  }
+}
+.no-touchevents .btn_reserv:hover::before,
+.no-touchevents .btn_recruit:hover::before {
+  background-color: #F7A029;
+  transition: 0.5s;
+}
+.no-touchevents .btn_reserv:hover::after,
+.no-touchevents .btn_recruit:hover::after {
+  transform: scale(1);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.btn_underline {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+}
+@media (min-width: 768px ) {
+  .btn_underline {
+    font-family: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-weight: 500;
+  }
+}
+@media (max-width: 767px ) {
+  .btn_underline {
+    font-family: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
+  }
+}
+.btn_underline svg {
+  width: 16px;
+  height: 8px;
+  margin-left: auto;
+  padding-left: 8px;
+  fill: #C36800;
+  flex: none;
+}
+
+header {
+  width: 100%;
+  margin-inline: auto;
+  box-shadow: 0 0 2px rgba(69, 76, 80, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: top 0.5s;
+}
+header .navHead1 {
+  padding: 20px calc(20px - 0.05em) 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  background: #FFF9E6;
+  box-shadow: 0px 6px 10px 0px rgba(64, 59, 52, 0.1);
+  position: relative;
+  z-index: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+header .navHead1 .icon1 {
+  display: block;
+  width: 20px;
+  height: 12px;
+  fill: #C36800;
+  transition: all 0.3s ease-out;
+}
+header .navHead1 .text1 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 20px;
+  white-space: nowrap;
+  transition: all 0.3s ease-out;
+}
+@media (min-width: 768px ) {
+  header .navHead1 .text1 {
+    font-family: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  }
+}
+@media (max-width: 767px ) {
+  header .navHead1 .text1 {
+    font-family: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
+  }
+}
+header .navHead1 .icon2 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #C36800;
+  border: 1px solid #C36800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+}
+header .navHead1 .icon2 svg {
+  display: block;
+  width: 8px;
+  height: 5px;
+  stroke: #ffffff;
+  fill: transparent;
+  transform: scale(1, -1);
+  transition: all 0.3s ease-out;
+}
+header .navHead1.simple {
+  justify-content: flex-start;
+  background: #ffffff;
+}
+header .navHead1.simple .icon3 {
+  display: block;
+  width: 10px;
+  height: 10px;
+  fill: #C36800;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 25px;
+  margin: auto 0;
+}
+header .navHead1.simple .text1 {
+  font-size: 14px;
+}
+header .navHead1.simple::before {
+  content: "閲覧中";
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #DE3E3E;
+  width: 16px;
+  height: 50px;
+  margin: -15px 16px -15px -31px;
+  opacity: 0;
+}
+header .navHead1.simple.active1::before {
+  width: 16px;
+  height: 50px;
+  margin: -15px 6px -15px -15px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+header .navHead1.simple.active2::before {
+  width: 16px;
+  height: 50px;
+  margin: -15px 6px -15px -15px;
+  opacity: 0.9;
+  transition: all 0.3s ease-in;
+}
+header .navHead2 {
+  padding: 10px 40px 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 4px;
+  background: #736953;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+header .navHead2 .icon1 {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+header .navHead2 .text1 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 20px;
+  transition: all 0.3s ease-out;
+  transition: 0.3s;
+}
+@media (min-width: 768px ) {
+  header .navHead2 .text1 {
+    font-family: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  }
+}
+@media (max-width: 767px ) {
+  header .navHead2 .text1 {
+    font-family: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
+  }
+}
+header .navHead2 .iconplus {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #C36800;
+  border: 1px solid #C36800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 12px;
+  transition: 0.3s;
+  margin: auto 0;
+}
+header .navHead2 .iconplus::before, header .navHead2 .iconplus::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9px;
+  height: 1px;
+  background-color: #ffffff;
+  border-radius: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.3s ease-out;
+}
+header .navHead2 .iconplus::after {
+  transform-origin: center center;
+  transform: rotate(90deg);
+}
+header .navHead2::before {
+  content: "閲覧中";
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #DE3E3E;
+  width: 16px;
+  height: 50px;
+  margin: auto 6px auto -26px;
+  opacity: 0;
+}
+header .navHead2.active1::before {
+  width: 16px;
+  height: 50px;
+  margin: auto -6px auto -5px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+header .navHead2.active2::before {
+  width: 16px;
+  height: 50px;
+  margin: auto -6px auto -5px;
+  opacity: 0.9;
+  transition: all 0.3s ease-in;
+}
+header .navHead2.simple {
+  justify-content: flex-start;
+  background: #ffffff;
+  cursor: pointer;
+}
+header .navHead2.simple .text1 {
+  color: #403B34;
+  font-size: 14px;
+}
+header .navHead2.simple .icon3 {
+  display: block;
+  width: 10px;
+  height: 10px;
+  fill: #C36800;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 25px;
+  margin: auto 0;
+}
+header .navHead3 {
+  height: 100%;
+  min-height: 60px;
+  padding: 10px 28px 10px 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  background: #ffffff;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+header .navHead3 .iconpickup {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin-right: 12px;
+}
+header .navHead3 .text1 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 20px;
+  transition: all 0.3s ease-out;
+}
+@media (min-width: 768px ) {
+  header .navHead3 .text1 {
+    font-family: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  }
+}
+@media (max-width: 767px ) {
+  header .navHead3 .text1 {
+    font-family: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
+  }
+}
+header .navHead3 .text1 .bold {
+  color: #DE3E3E;
+}
+header .navHead3 .icon1 {
+  display: block;
+  width: 10px;
+  height: 10px;
+  fill: #C36800;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 12px;
+  padding: 0;
+  margin: auto 0;
+}
+header .navHead3::before {
+  content: "閲覧中";
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #DE3E3E;
+  width: 16px;
+  height: 50px;
+  margin: auto 6px auto -26px;
+  opacity: 0;
+}
+header .navHead3.active1::before {
+  width: 16px;
+  height: 50px;
+  margin: auto 6px auto -10px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+header .navHead3.active2::before {
+  width: 16px;
+  height: 50px;
+  margin: auto 6px auto -10px;
+  opacity: 0.9;
+  transition: all 0.3s ease-in;
+}
+header .navHead3.column .bg1, header .navHead3.column .bg1 img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 70% center;
+     object-position: 70% center;
+  z-index: 0;
+  border-radius: 4px;
+}
+header .navHead3.column .textGrp {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+header .navHead3.column .textColumn {
+  display: inline-flex;
+  padding: 2px 6px;
+  align-items: center;
+  border-radius: 10px;
+  background: #C36800;
+  width: 61px;
+  height: 14px;
+  color: #ffffff;
+  font-family: "Cormorant Infant";
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+header .navHead3.column .text1 {
+  position: relative;
+}
+header .navHead3.column::before {
+  position: relative;
+  z-index: 1;
+}
+header .menuCat {
+  flex: none;
+  width: 100%;
+  margin: 16px 0 6px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+@media (min-width: 768px ) {
+  header .menuCat {
+    font-family: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  }
+}
+@media (max-width: 767px ) {
+  header .menuCat {
+    font-family: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
+  }
+}
+header .menu_close {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+header .menu_close svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+header .menu_close2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 69px;
+  height: 22px;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 60px;
+  background: #403B34;
+  cursor: pointer;
+  margin: 30px auto 0;
+}
+header .menu_close2 .text1 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+header .menu_close2 .icon1 {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  fill: #ffffff;
+}
+header .lineHead {
+  width: 100%;
+  height: 70px;
+  padding: 0 10px 0 20px;
+  background-color: #fff;
+}
+header .lineHead > .wrapper {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+header .lineHead .logoGrp {
+  display: flex;
+  height: 40px;
+  margin-right: auto;
+}
+header .lineHead .logoGrp .logo {
+  width: 40px;
+  margin-right: 8px;
+}
+@media (max-width: 349px) {
+  header .lineHead .logoGrp .logo {
+    display: none;
+  }
+}
+header .lineHead .logoGrp .txt {
+  display: block;
+  margin-bottom: 7px;
+  color: #6C675B;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+@media (min-width: 768px ) {
+  header .lineHead .logoGrp .txt {
+    font-family: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  }
+}
+@media (max-width: 767px ) {
+  header .lineHead .logoGrp .txt {
+    font-family: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
+  }
+}
+header .lineHead .logoGrp .logo_txt1 {
+  width: auto;
+  height: 23px;
+}
+@media (max-width: 374px ) {
+  header .lineHead .logoGrp .logo_txt1 {
+    height: 21px;
+  }
+}
+header .lineHead .btn_reserv {
+  width: 50px;
+  height: 50px;
+  flex-direction: column;
+  border-radius: 4px;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+header .lineHead .btn_reserv svg {
+  width: 18px;
+  height: 18px;
+}
+header .lineHead .btn_reserv::before {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+}
+header .lineHead .btn_reserv::after {
+  opacity: 0;
+}
+header .lineHead .btn_reserv svg {
+  margin-right: 0;
+  margin-bottom: 4px;
+}
+header .lineHead .btn_menu {
+  width: 50px;
+  height: 50px;
+  margin-left: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+header .lineHead .btn_menu span {
+  margin: 10px 0;
+}
+header .lineHead .btn_menu::before, header .lineHead .btn_menu::after {
+  content: "";
+}
+header .lineHead .btn_menu span, header .lineHead .btn_menu::before, header .lineHead .btn_menu::after {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: currentColor;
+}
+header .menu_ttl {
+  width: 100%;
+  height: 60px;
+  background-color: #403B34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cormorant Infant", serif;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  position: relative;
+}
+header .menu_ttl .menu_top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 20px;
+  background-color: #FFF9E6;
+  border-radius: 4px;
+  padding: 5px 6px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  margin: auto 0;
+}
+header .menu_ttl .menu_top .icon1 {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  fill: #C36800;
+  transform: scale(-1, 1);
+  margin-right: 4px;
+}
+header .menu_ttl .menu_top .text1 {
+  color: #403B34;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+header .megamenu1 {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border-radius: 0 0 4px 4px;
+  background: var(--k-25, #AC9E7E);
+  box-shadow: 0px 1px 2px 0px rgba(64, 59, 52, 0.25);
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+header .megamenu1 .megamenu_list {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+header .megamenu1 .megamenu_list .column_list {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+header .megamenu1 .megamenu_list .item {
+  width: 100%;
+}
+header .megamenu1 .megamenu_list.line2 {
+  flex-flow: wrap;
+}
+header .megamenu1 .megamenu_list.line2 .item {
+  width: calc((100% - 4px) / 2);
+}
+header .megamenu2 {
+  padding: 0 10px;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+header .megamenu2 .item {
+  width: 100%;
+}
+header .megamenu2.line2 {
+  flex-flow: wrap;
+}
+header .megamenu2.line2 .item {
+  width: calc((100% - 4px) / 2);
+}
+header #menu_open,
+header .submenu_open,
+header .subnav_open {
+  display: none;
+}
+header #menu_open:not(:checked) ~ nav .megamenu1, header #menu_open:not(:checked) ~ nav .megamenu2,
+header #menu_open:not(:checked) ~ nav .navHead1, header #menu_open:not(:checked) ~ nav .navHead2, header #menu_open:not(:checked) ~ nav .navHead3 {
+  pointer-events: none;
+}
+header #menu_open:checked ~ nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+header .submenu_open:checked + .navHead1 {
+  background-color: #403B34;
+  border-radius: 4px 4px 0 0;
+}
+header .submenu_open:checked + .navHead1 .icon1 {
+  fill: #CD7D20;
+}
+header .submenu_open:checked + .navHead1 .text1 {
+  color: #ffffff;
+}
+header .submenu_open:checked + .navHead1 .icon2 {
+  background-color: transparent;
+  border-color: #CD7D20;
+}
+header .submenu_open:checked + .navHead1 .icon2 svg {
+  stroke: #CD7D20;
+  transform: scale(1, 1);
+}
+header .submenu_open:checked + .navHead1 + .megamenu1 {
+  padding: 10px;
+  max-height: 3500px;
+  pointer-events: auto;
+  opacity: 1;
+}
+header .subnav_open:checked + .navHead2 .iconplus {
+  background-color: transparent;
+  border: 1px solid #CD7D20;
+}
+header .subnav_open:checked + .navHead2 .iconplus::before, header .subnav_open:checked + .navHead2 .iconplus::after {
+  background-color: #CD7D20;
+}
+header .subnav_open:checked + .navHead2 .iconplus::after {
+  transform-origin: center center;
+  transform: rotate(0);
+}
+header .subnav_open:checked + .navHead2 + .megamenu2 {
+  padding: 10px 10px 20px;
+  max-height: 2000px;
+  pointer-events: auto;
+  opacity: 1;
+}
+@media (min-width: 768px ) {
+  header {
+    max-width: 375px;
+  }
+}
+header.top {
+  position: absolute;
+  transition: 0s;
+}
+header.hide {
+  top: -70px;
+}
+header nav {
+  width: 100%;
+  height: 100vh;
+  margin-inline: auto;
+  background-color: #DBD7CE;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+@media (min-width: 768px ) {
+  header nav {
+    max-width: 375px;
+  }
+}
+header nav > .wrapper {
+  position: relative;
+  height: calc(100% - 100px);
+  padding: 30px 20px 40px;
+  overflow-y: auto;
+}
+header nav .navGrp + .navGrp {
+  margin-top: 10px;
+}

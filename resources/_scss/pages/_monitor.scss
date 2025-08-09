@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+body#monitor {
+    .mainSec {
+        .secTitle {
+            margin-bottom: 40px;
+        }
+        .txt {
+            margin: -6px 0;
+            text-align: justify;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: .05em;
+            @include media(pc) {
+                font-family: $fontG_pc;
+                font-weight: 500;
+            }
+            @include media(sp) {
+                font-family: $fontG_sp;
+            }
+            b {
+                color: #D93C0D;
+            }
+        }
+        .boxList {
+            li {
+                padding: 30px 20px;
+                background-color: #fff;
+                border-radius: 4px;
+                box-shadow: 0 1px 2px rgba(#524D46, .2);
+                &:not(:first-child) {
+                    margin-top: 10px;
+                }
+            }
+            .ttl {
+                margin: -3px 0 17px;
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 700;
+                letter-spacing: .05em;
+                @include media(pc) {
+                    font-family: $fontG_pc;
+                }
+                @include media(sp) {
+                    font-family: $fontG_sp;
+                }
+            }
+        }
+        .discountBox {
+            max-width: 335px;
+            margin: 30px 0;
+            padding: 30px 20px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px rgba(#524D46, .2);
+            @include media(pc) {
+                font-family: $fontG_pc;
+            }
+            @include media(sp) {
+                font-family: $fontG_sp;
+            }
+            .ttl {
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: .05em;
+            }
+            dl {
+                margin-top: 30px;
+            }
+            .unit {
+                margin-top: 20px;
+            }
+            dt {
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: .05em;
+                white-space: nowrap;
+            }
+            dd {
+                margin: 8px 0 -4px;
+                padding-left: 15px;
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: .05em;
+                .tax {
+                    margin-left: 4px;
+                    font-size: 10px;
+                    line-height: 1;
+                    letter-spacing: .05em;
+                }
+                &.discount {
+                    text-align: right;
+                    color: $themeColor1;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

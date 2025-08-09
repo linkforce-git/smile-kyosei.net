@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+// --------------------------------
+//  定数定義
+// --------------------------------
+$themeColor1: #C36800; // 項目タイトル
+$themeColor2: #D88C32; // ボタン
+$themeColor3: #403B34; // テキスト
+$themeColor4: #6C675B; // テキスト(弱)
+$themeColor5: #DBD7CE; // ボーダー
+$themeColor6: #F8F8F5; // 背景
+$themeColor7: #FFB100; // 項目タイトル(明るめ)
+
+$fontM_pc: YakuHanMPs, "游明朝", YuMincho, "Hiragino Mincho ProN", "HG明朝E", serif;
+$fontM_sp: YakuHanMPs, "Hiragino Mincho ProN", serif;
+$fontG_pc: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$fontG_sp: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
+
+// --------------------------------
+//  ブレイク用
+// --------------------------------
+$lg: 1280px; // PC最大
+$md: 1080px; // タブレット～PC
+$sm: 768px;  // タブレット～スマホ
+$xs: 375px;  // スマホ最小
+$breakpoints: (
+	// 個別端末指定
+	xl: "(min-width: "$lg")",     // PC（大）
+	lg: "(max-width: "($lg - 1)") and (min-width: "$md")", // PC（小）
+	md: "(max-width: "($md - 1)") and (min-width: "$sm")", // タブレット
+	sm: "(max-width: "($sm - 1)") and (min-width: "$xs")", // スマホ（大）
+	xs: "(max-width: "($xs - 1)")", // スマホ（小）
+
+	// 複数端末指定
+	xl_lg: "(min-width: "$md")", // PC（大）、PC（小）
+	pc: "(min-width: "$sm")",     // PC（大）、PC（小）、タブレット
+	md_sp: "(max-width: "($md - 1)")", // タブレット、スマホ（大）、スマホ（小）
+	sp: "(max-width: "($sm - 1px)")", // スマホ（大）、スマホ（小）
+);
+@mixin media($breakpoint) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}

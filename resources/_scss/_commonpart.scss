@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+// LPなどからも呼び出すパーツ
+.btn_reserv,
+.btn_recruit {
+    width: 100%;
+    max-width: 335px;
+    height: 80px;
+    background-color: rgba($themeColor2, .2);
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: .05em;
+    position: relative;
+    z-index: 0;
+    &::before {
+        content: "";
+        display: block;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        background-color: $themeColor2;
+        border-radius: 40px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        z-index: -1;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #FFCD6A;
+        border-radius: 45px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: scale(0);
+    }
+    >* {
+        pointer-events: none;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        fill: currentColor;
+    }
+    @include media(pc) {
+        font-family: $fontG_pc;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    @include media(sp) {
+        font-family: $fontG_sp;
+    }
+    .no-touchevents & {
+        &:hover {
+            &::before {
+                background-color: #F7A029;
+                transition: .5s;
+            }
+            &::after {
+                transform: scale(1);
+                opacity: 0;
+                transition: .5s;
+            }
+        }
+    }
+}
+
+
+.btn_underline {
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 4px;
+    @include media(pc) {
+        font-family: $fontG_pc;
+        font-weight: 500;
+    }
+    @include media(sp) {
+        font-family: $fontG_sp;
+    }
+    svg {
+        width: 16px;
+        height: 8px;
+        margin-left: auto;
+        padding-left: 8px;
+        fill: $themeColor1;
+        flex: none;
+    }
+}

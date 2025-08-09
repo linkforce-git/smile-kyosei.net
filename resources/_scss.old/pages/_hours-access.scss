@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+body#hours-access {
+    .secTitle {
+        margin-bottom: 40px;
+    }
+    #hoursArea {
+        .hours {
+            width: 100%;
+            max-width: 800px;
+            margin-top: -10px;
+            @include media(pc) {
+                font-family: $fontG_pc;
+                font-weight: 500;
+            }
+            @include media(sp) {
+                font-family: $fontG_sp;
+            }
+            thead {
+                tr {
+                    height: 35px;
+                }
+                th {
+                    font-size: 15px;
+                    &:first-child {
+                        letter-spacing: .05em;
+                    }
+                    &:not(:first-child) {
+                        text-align: center;
+                    }
+                    &.holiday {
+                        white-space: nowrap;
+                        letter-spacing: -0.1em;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    height: 45px;
+                }
+                th {
+                    font-family: 'Lato', sans-serif;
+                    font-size: 14px;
+                    letter-spacing: .05em;
+                }
+                td {
+                    width: 10.05%;
+                    text-align: center;
+                    font-size: 11px;
+                    font-feature-settings: normal;
+                    &.star {
+                        font-size: 13px;
+                    }
+                }
+            }
+            tr {
+                background: linear-gradient(to right, rgba($themeColor3, .5) 1px, transparent 1px) left bottom/3px 1px repeat-x;
+            }
+        }
+        .hoursTxt {
+            margin-top: 20px;
+            .txt {
+                margin: -3px 0;
+                color: $themeColor4;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: .05em;
+                @include media(pc) {
+                    font-family: $fontG_pc;
+                    font-weight: 500;
+                }
+                @include media(sp) {
+                    font-family: $fontG_sp;
+                }
+            }
+            .information {
+                &-area {
+                    width: 335px;
+                    max-width: 100%;
+                    margin: 0 auto;
+                }
+                &-wrap {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    #requestArea {
+        .txt {
+            margin: -6px 0;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: .05em;
+            @include media(pc) {
+                font-family: $fontG_pc;
+                font-weight: 500;
+            }
+            @include media(sp) {
+                font-family: $fontG_sp;
+            }
+        }
+    }
+    #mapArea {
+        padding-left: 0;
+        padding-right: 0;
+        .secTitle {
+            width: calc(100% - 40px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        dl {
+            width: calc(100% - 40px);
+            margin: 0 auto;
+            font-size: 16px;
+            letter-spacing: .05em;
+            @include media(pc) {
+                font-family: $fontG_pc;
+                font-weight: 500;
+            }
+            @include media(sp) {
+                font-family: $fontG_sp;
+            }
+            dt {
+                margin-bottom: 20px;
+                font-weight: 700;
+                &::after {
+                    content: '：';
+                }
+            }
+            dd {
+                margin-bottom: 30px;
+            }
+        }
+        .map {
+            width: 100%;
+            iframe {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 375/234;
+                vertical-align: top;
+                &.largeArea {
+                    display: none;
+                }
+            }
+        }
+    }
+    #accessArea {
+        padding-bottom: 80px;
+        li {
+            @include media(pc) {
+                font-family: $fontG_pc;
+                font-weight: 500;
+            }
+            @include media(sp) {
+                font-family: $fontG_sp;
+            }
+            &:not(:first-child) {
+                margin-top: 40px;
+            }
+        }
+        .ttl {
+            margin: -3px 0 27px;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 700;
+            letter-spacing: .05em;
+        }
+        .txt {
+            margin: -6px 0;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: .05em;
+            b {
+                color: $themeColor1;
+            }
+        }
+        .col {
+            iframe {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16/9;
+                margin-top: 20px;
+                flex: none;
+                border-radius: 4px;
+            }
+        }
+        .cap {
+            margin-top: 10px;
+            font-size: 14px;
+            letter-spacing: .05em;
+        }
+    }
+    #for-visitors {
+        padding: 0;
+        background-color: transparent;
+        &::before {
+            .webp & {
+                background-image: url(../img/hours-access/for-visitors_bg-sp.jpg.webp);
+            }
+            .no-webp & {
+                background-image: url(../img/hours-access/for-visitors_bg-sp.jpg);
+            }
+        }
+        .transparent {
+            font-size: 20px;
+            padding: 85px 20px;
+            align-items: flex-start;
+            @include media(xs) {
+                padding: 85px 2px;
+            }
+            .row_pc {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .row_sp {
+                margin: -5px 0;
+                padding: 14px 18px;
+                position: relative;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    filter: blur(10px);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+        }
+        .blur {
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: "";
+                display: block;
+                width: 200%;
+                height: 200%;
+                background-color: rgba(#fff, .9);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            .secTitle {
+                margin-bottom: 0;
+            }
+            .subTitle {
+                & + .txt {
+                    margin-top: 33px;
+                }
+            }
+            .txt {
+                margin: 23px auto -7px;
+                text-align: justify;
+                font-size: 16px;
+                line-height: 30px;
+                letter-spacing: .05em;
+            }
+        }
+    }
+}

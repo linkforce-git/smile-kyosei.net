@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+body#pride {
+    #firstView1 {
+        color: #fff;
+        .pic {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: 100vh;
+            margin-inline: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            @include media(pc) {
+                width: 375px;
+            }
+        }
+        .txtBox {
+            background-color: rgba(#1D170E, .8);
+            &::before {
+                height: 160px;
+                background-image: linear-gradient(transparent, rgba(#1D170E, .8));
+                top: -160px;
+            }
+            .pageTitle {
+                .en {
+                    color: $themeColor7;
+                }
+            }
+            .txt {
+                max-width: 700px;
+                b {
+                    color: $themeColor7;
+                }
+            }
+        }
+    }
+    .mainSec {
+        background-color: rgba(#1D170E, .8);
+        color: #fff;
+        .secTitle {
+            span {
+                color: $themeColor7;
+            }
+            svg {
+                fill: $themeColor4;
+            }
+        }
+        .pic {
+            width: 100%;
+            margin-top: 40px;
+            border-radius: 4px;
+            vertical-align: top;
+        }
+        figure {
+            width: 60%;
+            min-width: 260px;
+            margin-top: 40px;
+            .fig {
+                width: 100%;
+                border-radius: 4px;
+                vertical-align: top;
+            }
+            figcaption {
+                margin: 7px 0 -3px;
+                text-align: justify;
+                font-size: 12px;
+                line-height: 18px;
+                letter-spacing: .05em;
+                @include media(pc) {
+                    font-family: $fontG_pc;
+                    font-weight: 500;
+                }
+                @include media(sp) {
+                    font-family: $fontG_sp;
+                }
+            }
+        }
+        .col {
+            margin: 33px 0 -7px;
+        }
+        .txt {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 30px;
+            letter-spacing: .05em;
+            & + .txt {
+                margin-top: 16px;
+            }
+            b {
+                color: $themeColor7;
+            }
+            strong {
+                font-weight: 700;
+            }
+        }
+    }
+    #messageArea {
+        .btn_frame {
+            margin: 60px auto 0;
+        }
+    }
+}

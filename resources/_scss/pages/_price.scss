@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+body#price {
+    .toggleList {
+        >.item {
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+        }
+        .listHeadWrap {
+            display: flex;
+            align-items: center;
+        }
+    }
+    #laminate-veneer .listBody .bgBox .material dl {
+        padding-top: 44px;
+    }
+}

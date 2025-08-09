@@ -1,0 +1,150 @@
+/**
+ *  アニメーションパーツページ
+ *  　※「class="ani aniFadeUp"」のように、セットで記載すること
+ *  　※　js制御で、aniクラスのついている対象が表示された際に、activeクラスを付与することで制御しています。
+ *
+/* ======================================================================================= */
+//  アニメーション
+// ======================================================================================= */
+// 参考URL
+//https://www.minimamente.com/example/magic_animations/
+
+// ------------------------------
+//  基本アニメーション
+// ------------------------------
+.ani,
+.aniNotAuto {
+  opacity: 0;
+  position: relative;
+
+  &.active {
+    opacity: 1.0;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+// ------------------------------
+//  フェード表示
+// ------------------------------
+// フェード
+.aniFadeIn {
+  &.active {
+    animation-name: fadeIn;
+    animation-duration: .3s;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+
+// 上からフェード
+.aniFadeUp {
+  transform: translateY(-40px);
+  opacity: 0;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.8s 0s ease;
+  }
+}
+
+
+// 左からフェード
+.aniFadeLeft {
+  transform: translateX(-40px);
+  opacity: 0;
+
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.8s 0s ease;
+  }
+}
+
+// 左からフェード（大きく動く）
+.aniFadeLeft2 {
+  transform: translateX(-120px);
+  opacity: 0;
+
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1.2s 0s ease;
+  }
+}
+
+// 左からフェード（大きく動く）
+.aniFadeLeft3 {
+  transform: translateX(0);
+  opacity: 0;
+  &.active {
+  }
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1.6s 0s ease-in;
+  }
+}
+
+
+// 右からフェード
+.aniFadeRight {
+  transform: translateX(40px);
+  opacity: 0;
+
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.8s 0s ease;
+    animation-name: fadeIn;
+  }
+}
+
+// ブラ付き―
+.aniFadeRight2 {
+  opacity: 0;
+
+  &.active {
+    opacity: 0;
+    animation-delay: 0.2s;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-name: fadeRight2;
+  }
+}
+
+@keyframes fadeRight2 {
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateX(40px);
+  }
+
+  100% {
+    opacity: 1.0;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+
+
+  // 下からフェード
+.aniFadeDown {
+  transform: translateY(40px);
+  opacity: 0;
+
+  &.active {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all .3s 0s ease-in;
+  }
+}

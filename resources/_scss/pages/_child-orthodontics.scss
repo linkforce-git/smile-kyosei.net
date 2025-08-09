@@ -1,0 +1,3464 @@
+@charset "UTF-8";
+
+$colorK1: #4E5B57;
+$colorK2: #637C74;
+$colorK4: #C8D3D0;
+$colorM1: #2A704C;
+$colorM2: #3E8661;
+$colorM3: #51AD7D;
+$colorY1: #FFD85B;
+$colorY2: #CBA258;
+$colorY3: #C99028;
+$colorB1: #7C6F5F;
+$colorB2: #928E75;
+$colorBG1: #F2F0ED;
+$colorBOX: #FCF8F2;
+$colorLink: #27A5E8;
+$colorAR: #D44E1A;
+
+@font-face {
+    font-family: "HigureGothic";
+    font-style: normal;
+    font-weight: 500;
+    src: url("HigureGothic-Medium.woff2") format('woff2'),
+         url("HigureGothic-Medium.woff")  format('woff');
+}
+@font-face {
+    font-family: "HigureGothic";
+    font-style: normal;
+    font-weight: 700;
+    src: url("HigureGothic-Bold.woff2") format('woff2'),
+         url("HigureGothic-Bold.woff")  format('woff');
+}
+@font-face {
+    font-family: "HigureGothic";
+    font-style: normal;
+    font-weight: 900;
+    src: url("HigureGothic-Black.woff2") format('woff2'),
+         url("HigureGothic-Black.woff")  format('woff');
+}
+
+body.child-ortho {
+    .gap10 {
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+    }
+    .gap20 {
+        display: flex;
+        flex-flow: column;
+        gap: 20px;
+    }
+    .gap26 {
+        display: flex;
+        flex-flow: column;
+        gap: 26px;
+    }
+    .gap30 {
+        display: flex;
+        flex-flow: column;
+        gap: 30px;
+    }
+    .gap36 {
+        display: flex;
+        flex-flow: column;
+        gap: 36px;
+    }
+    .gap40 {
+        display: flex;
+        flex-flow: column;
+        gap: 40px;
+    }
+    .gap50 {
+        display: flex;
+        flex-flow: column;
+        gap: 50px;
+    }
+    .gap60 {
+        display: flex;
+        flex-flow: column;
+        gap: 60px;
+    }
+    .gap80 {
+        display: flex;
+        flex-flow: column;
+        gap: 80px;
+    }
+    .mt80 {
+        margin-top: 80px;
+    }
+    .btna,
+    .btna2,
+    .btna3 {
+        height: 70px;
+        border-radius: 35px;
+        border: 1px solid rgba( $colorM1, .6 );
+        width: 100%;
+        max-width: 270px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px 0 26px;
+        .txt {
+            color: $colorM1;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 22px; /* 146.667% */
+            letter-spacing: .1em;
+        }
+        .arw {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: $colorM1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::after {
+                content: '';
+                display: block;
+                position: relative;
+                z-index: 10;
+                width: 12px;
+                height: 12px;
+                background: url(../img/child-orthodontics/arw_link2.svg) center/contain no-repeat;
+            }
+        }
+    }
+    .btna2 {
+        height: 70px;
+        max-width: 240px;
+        .txt {
+        }
+        .arw {
+            &::after {
+                background-image: url(../img/child-orthodontics/arw_outlink.svg);
+            }
+        }
+    }
+    .btna3 {
+        height: 70px;
+        max-width: 240px;
+        justify-content: flex-start;
+        gap: 10px;
+        .txt {
+            color: $colorM1;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 22px; /* 129.412% */
+            letter-spacing: .1em;
+        }
+        .arw {
+            &::after {
+                background-image: url(../img/child-orthodontics/arw_tel.svg);
+            }
+        }
+    }
+
+    .btnb,
+    .btnb2,
+    .btnb3,
+    .btnb4 {
+        height: 80px;
+        border-radius: 55px;
+        width: 100%;
+        max-width: 290px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        background-color: $colorM1;
+        padding: 0 25px 0 30px;
+        .txt {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 22px; /* 146.667% */
+            letter-spacing: .1em;
+        }
+        .arw {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::after {
+                content: '';
+                display: block;
+                position: relative;
+                z-index: 10;
+                width: 10px;
+                height: 10px;
+                background: $colorM1;
+                mask: url(../img/child-orthodontics/arw_link2.svg) center/contain no-repeat;
+            }
+        }
+    }
+    .btnb2 {
+        padding-left: 6px;
+        .mark {
+            padding-top: calc( 16px - 3px );
+            width: 68px;
+            height: 68px;
+            border-radius: 34px;
+            background: #FFF;
+            color: $colorM1;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 900;
+            line-height: 14px; /* 116.667% */
+            letter-spacing: .1em;
+            .line {
+                font-weight: 700;
+            }
+        }
+    }
+    .btnb3 {
+        max-width: 221px;
+        height: 60px;
+        background-color: $colorAR;
+        .arw {
+            &::after {
+                background: $colorAR;
+            }
+        }
+    }
+    .btnb4 {
+        max-width: 300px;
+        background-color: $colorAR;
+        .txtBox {
+            display: flex;
+            flex-flow: column;
+            gap: 12px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 6px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 20px;
+            background: $colorY1;
+
+            .tagtxt {
+                color: $colorAR;
+                font-size: 12px;
+                font-weight: 900;
+                line-height: 11px;
+                display: inline-block;
+                .big {
+                    font-size: 16px;
+                }
+            }
+        }
+        .txt {
+            line-height: 13px;
+        }
+        .arw {
+            &::after {
+                background: $colorAR;
+            }
+        }
+    }
+
+    .btn_monitor {
+        display: block;
+        .pic1 {
+            display: block;
+            width: 100px;
+            height: 100px;
+            box-shadow: 0px 10px 20px 0px rgba(90, 90, 90, 0.10);
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    .btnPirce1 {
+        display: flex;
+        width: 330px;
+        padding: 40px 20px;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: 12px;
+        background: #FFF;
+        box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+        color: $colorM1;
+        .txt {
+            display: flex;
+            padding: 0 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            color: #fff;
+            background-color: $colorM1;
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 8px;
+            line-height: 22px;
+        }
+        .yen {
+            font-family: Outfit;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 12px;
+        }
+        .num {
+            font-family: Outfit;
+            font-size: 28px;
+            font-weight: 300;
+            margin-left: 2px;
+            line-height: 18px;
+        }
+        .zei {
+            font-size: 8px;
+            font-weight: 500;
+            margin-left: 2px;
+            line-height: 8px;
+            padding-top: 10px;
+        }
+
+        &.colorOrange {
+            color: #fff;
+            background-color: $colorY3;
+            .txt {
+                background-color: #fff;
+                color: $colorY3;
+            }
+        }
+    }
+    .arw_d {
+        width: 26px;
+        height: 62px;
+        margin: 0 auto;
+    }
+    
+    .sec_1st_about {
+        >.inner {
+            position: relative;
+            padding-top: 80px;
+            .bg {
+                display: block;
+                width: 344px;
+                height: 343px;
+                background-color: #7C6F5F;
+                mask: url(../img/child-orthodontics/mft/issuebg.svg) center/contain no-repeat;
+                opacity: 0.2;
+                position: absolute;
+                inset: -171px 0 auto 0;
+                margin: 0 auto;
+            }
+            >.wrapper {
+                width: calc(330 / 390 * 100%);
+                margin: 0 auto;
+            }
+            .picHead {
+                display: block;
+                width: 100%;
+                height: auto;
+                margin: 10px auto 50px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .sec_1st_effect {
+        .tglBox {
+            .picc {
+                &:not(:last-child) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .compareList1 {
+        width: calc( 350 / 330 * 100% );
+        margin-left: calc( -10 / 330 * 100% );
+        position: relative;
+        z-index: 1;
+        .listHead1 {
+            display: flex;
+            gap: 4px;
+            .ttl1 {
+                color: #fff;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 20px; /* 142.857% */
+                letter-spacing: .2em;
+                margin: -5px -.1em -5px 0;
+            }
+
+            .head1 {
+                width: calc(80 / 350 * 100%);
+            }
+            .head2 {
+                width: calc(131 / 350 * 100%);
+                display: flex;
+                padding: 12px 8px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                background: $colorB1;
+                box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+            }
+            .head3 {
+                width: calc(131 / 350 * 100%);
+                display: flex;
+                padding: 12px 8px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+                background: url(../img/child-orthodontics/mft/comparebg2.png.webp) center/cover no-repeat;
+                .no-webp & {
+                    background-image: url(../img/child-orthodontics/mft/comparebg2.png.webp);
+                }
+            }
+        }
+        .listBody1 {
+            display: flex;
+            flex-flow: column;
+            gap: 4px;
+            margin-top: 8px;
+            .list1 {
+                display: flex;
+                background: #fff;
+                box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+                    border-radius: 6px;
+                    overflow: hidden;
+
+                &.h80 {
+                    height: 80px;
+                }
+                &.h100 {
+                    height: 100px;
+                }
+                .head1 {
+                    width: calc( 80 / 350 * 100% );
+                    padding: 10px 8px;
+                    color: $colorK2;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    .ttl1 {
+                        display: flex;
+                        align-items: center;
+                        color: $colorK1;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 18px; /* 150% */
+                        min-height: 26px;
+                        margin: -5px -.1em -5px 0;
+                    }
+                }
+                .body1 {
+                    width: calc(135 / 350 * 100%);
+                    padding: 10px 8px;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    text-align: center;
+                    background: $colorB2;
+                    .txt1 {
+                        display: flex;
+                        align-items: center;
+                        color: #FFF;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 18px; /* 150% */
+                        margin: -5px -.1em -5px 0;
+                    }
+                    & + .body1 {
+                        position: relative;
+                        width: calc(135 / 350 * 100%);
+                        background: $colorM3;
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            width: 1px;
+                            height: calc(100% - 20px);
+                            background: $colorK1;
+                            opacity: .2;
+                            position: absolute;
+                            inset: auto auto auto 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .smileRecordWrap {
+        width: 100%;
+        height: 600px;
+        margin-top: 60px;
+        padding: 78px calc(20 / 390 * 100%) 0;
+        background: url(../img/orthodontics/clearcorrect/smile_record/bg.jpg.webp) center/cover no-repeat;
+        text-align: center;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        .no-webp & {
+            background-image: url(../img/orthodontics/clearcorrect/smile_record/bg.jpg);
+        }
+        &::before {
+            content: '';
+            width: 360px;
+            height: 478px;
+            background: url(../img/orthodontics/clearcorrect/smile_record/map.png) top/100% auto no-repeat;
+            position: absolute;
+            top: 50px;
+            left: calc(50% - 195px);
+            z-index: -1;
+        }
+        img {
+            max-width: 100%;
+        }
+        .plaque {
+            margin-top: 30px;
+            position: relative;
+            z-index: 0;
+            &::before {
+                content: '';
+                width: 100%;
+                height: 212px;
+                background: url(../img/orthodontics/clearcorrect/smile_record/lines.svg) center/100% 100% no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+        &.inner {
+            height: 560px;
+            padding: 48px calc(20 / 350 * 100%) 0;
+            margin-top: 0;
+            border-radius: 10px;
+            &::before {
+                width: 330px;
+                left: calc(50% - 165px);
+            }
+            .plaque {
+                &::before {
+                    height: 190px;
+                    top: 10px;
+                }
+            }
+        }
+        &.short {
+            height: 420px;
+            padding-top: 60px;
+            &::before {
+                top: 80px;
+            }
+            .plaque {
+                margin-top: 20px;
+            }
+        }
+        &.short.inner {
+            height: 400px;
+            padding: 40px calc(20 / 310 * 100%) 0;
+            &::before {
+                width: 290px;
+                top: 66px;
+                left: calc(50% - 145px);
+            }
+            .plaque {
+                &::before {
+                    height: 168px;
+                    top: 20px;
+                }
+            }
+        }
+    }
+    .commentWrap {
+        padding: 80px calc(20 / 390 * 100%);
+        background: $colorY3;
+        color: #fff;
+        &.mt80 {
+            margin-top: 80px;
+        }
+        &.paddingtb50 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        &.inner {
+            margin-top: 0;
+            border-radius: 10px;
+        }
+        .logo {
+            display: block;
+            width: 236px;
+            margin: 0 auto 40px;
+        }
+        .comment {
+            max-width: 350px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 21px;
+            @include media(pc) {
+                font-family: $fontG_pc;
+                font-weight: 500;
+            }
+            @include media(sp) {
+                font-family: $fontG_sp;
+            }
+            .balloon {
+                flex: auto;
+                padding: 11px calc(16px - .1em) 10px 16px;
+                background-color: #fff;
+                color: $colorY3;
+                border-radius: 6px;
+                font-size: 15px;
+                line-height: 26px;
+                font-weight: 700;
+                letter-spacing: .1em;
+                position: relative;
+                @include media(xs) {
+                    br {
+                        display: none;
+                    }
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    background: #FFF;
+                    clip-path: polygon(0 0, 100% 50%, 0 100%);
+                    position: absolute;
+                    top: calc(50% - 5px);
+                    right: -8px;
+                }
+            }
+            .picGrp {
+                flex: none;
+                width: 78px;
+                text-align: center;
+            }
+            .portrait {
+                display: block;
+                margin-bottom: 8px;
+                border-radius: 6px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .job {
+                margin: 0 -.1em 6px 0;
+                font-size: 10px;
+                letter-spacing: .1em;
+            }
+            .name {
+                margin-right: -.1em;
+                font-size: 12px;
+                letter-spacing: .1em;
+            }
+        }
+        .box {
+            padding: 30px calc(20 / 350 * 100%);
+            background: $colorBG2;
+            border-radius: 10px;
+            display: flex;
+            flex-flow: column;
+            gap: 30px;
+            color: $themeColor3;
+        }
+    }
+
+
+    .be_af_unit,
+    .setup_unit {
+        width: 100%;
+        max-width: 310px;
+        margin: 0 auto;
+        .unit_ttl {
+            display: none;
+/*
+            margin-right: -.1em;
+            text-align: center;
+            font-family: "Outfit", sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: .1em;
+            opacity: .5;
+*/
+        }
+    }
+    .be_af_unit {
+        .be_af_tgl {
+            display: none;
+            &:checked {
+                & ~ .pic .be {
+                    opacity: 0;
+                }
+                & ~ .be_af_btn {
+                    .be {
+                        background: rgba(#fff, 0);
+                        box-shadow: 0px 1px 1px 0px rgba(64, 64, 64, 0);
+                        color: rgba(#fff, .6);
+                        font-weight: inherit;
+                        &::after {
+                            opacity: .3;
+                        }
+                    }
+                    .af {
+                        background: #fff;
+                        box-shadow: 0px 1px 1px 0px rgba(64, 64, 64, 0.80);
+                        color: $themeColor1;
+                        font-weight: 700;
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .pic {
+            margin-top: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            .be {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: .3s;
+            }
+            img {
+                max-width: min(100%, 310px);
+                aspect-ratio: 310/180;
+                object-fit: cover;
+            }
+        }
+        .be_af_btn {
+            width: 148px;
+            height: 30px;
+            margin: -15px auto 0;
+            padding: 4px;
+            background: $themeColor1;
+            border-radius: 15px;
+            box-shadow: 0 0 0 4px rgba(#fff, .6);
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            cursor: pointer;
+            @include media(pc) {
+                font-family: $fontG_pc;
+                font-weight: 500;
+            }
+            @include media(sp) {
+                font-family: $fontG_sp;
+            }
+            .txt {
+                width: 56px;
+                height: 22px;
+                border-radius: 11px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 10px;
+                position: relative;
+                transition: .3s;
+                &::after {
+                    content: '';
+                    width: 12px;
+                    height: 6px;
+                    background: #fff;
+                    mask: url(../img/orthodontics/arw_be_af.svg) center/contain no-repeat;
+                    position: absolute;
+                    transition: .3s;
+                }
+            }
+            .be {
+                background: #fff;
+                box-shadow: 0px 1px 1px 0px rgba(64, 64, 64, 0.80);
+                color: $themeColor1;
+                font-weight: 700;
+                &::after {
+                    top: 11px;
+                    right: -24px;
+                }
+            }
+            .af {
+                background: rgba(#fff, 0);
+                box-shadow: 0px 1px 1px 0px rgba(64, 64, 64, 0);
+                color: rgba(#fff, .6);
+                &::after {
+                    bottom: 11px;
+                    left: -24px;
+                    transform: scaleX(-1);
+                    opacity: .3;
+                }
+            }
+        }
+    }
+    .setup_unit {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .setup_unit + div .toggle_open {
+        display: none;
+        & + .folder {
+            width: calc(390 / 350 * 100%);
+            max-height: 60px;
+            margin: 0 calc(-20 / 350 * 100%);
+            padding: 0 calc(20 / 350 * 100%) 30px;
+            overflow: hidden;
+            transition: max-height .5s;
+            mask: linear-gradient(#fff, #fff calc(100% - 80px), rgba(#fff, 0)) center/100% 100% no-repeat;
+
+            width: 100%;
+            max-height: 0;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            transition: max-height .5s, opacity .5s;
+
+            
+            & + .folder_bottom {
+                margin-top: 0;
+                position: relative;
+                z-index: 0;
+                &::before {
+/*
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    margin: 0 auto;
+                    background: $themeColor2;
+                    border-radius: 1px;
+                    position: absolute;
+                    top: calc(50% - 1px);
+                    left: 0;
+                    right: 0;
+                    z-index: -1;
+*/
+                }
+                .btn_folder {
+                    display: block;
+                    width: fit-content;
+                    min-width: 110px;
+                    height: 30px;
+                    margin: 0 auto;
+                    padding: 0 10px;
+                    background: $colorM2;
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: .1em;
+                    cursor: pointer;
+                    @include media(pc) {
+                        font-family: $fontG_pc;
+                    }
+                    @include media(sp) {
+                        font-family: $fontG_sp;
+                    }
+                    .icon {
+                        display: block;
+                        width: 18px;
+                        height: 18px;
+                        background: #fff;
+                        border-radius: 50%;
+                        position: relative;
+                        &::before, &::after {
+                            content: "";
+                            width: 8px;
+                            height: 2px;
+                            background: $colorM2;
+                            border-radius: 1px;
+                            position: absolute;
+                            top: 8px;
+                            left: 5px;
+                        }
+                        &::after {
+                            transform: rotate(90deg);
+                        }
+                    }
+                    .close {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &:checked + .folder {
+            max-height: 4500px;
+            mask: none;
+
+            max-height: 120px;
+            opacity: 1;            
+            & + .folder_bottom {
+                margin-top: 0;
+                &::before {
+                    background: #A5A5A5;
+                }
+                .btn_folder {
+                    background: #A5A5A5;
+                    .icon {
+                        &::before {
+                            background: #707070;
+                        }
+                        &::after {
+                            opacity: 0;
+                        }
+                    }
+                    .open {
+                        display: none;
+                    }
+                    .close {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .setupList {
+        width: min(100%, 250px);
+        margin: 0 auto;
+        border-radius: 4px;
+        overflow: hidden;
+        img {
+            max-width: min(100%, 250px);
+            aspect-ratio: 250/120;
+            object-fit: cover;
+        }
+    }
+    .setupRange {
+        appearance: none;
+        width: 240px;
+        height: 4px;
+        margin: 5px 0;
+        border-radius: 2px;
+        background: rgba(#fff, .2);
+        color: #FFF;
+        cursor: pointer;
+        /* ツマミ：Chrome, Safari, Edge用 */
+        &::-webkit-slider-thumb {
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            border: 4px solid #ffffff;
+            border-radius: 7px;
+            background: currentColor;
+            box-shadow: 0px 1px 1px 0px rgba(64, 64, 64, 0.80);
+        }
+        /* ツマミ：Firefox用 */
+        &::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            border: 4px solid #ffffff;
+            border-radius: 7px;
+            background: currentColor;
+            box-shadow: 0px 1px 1px 0px rgba(64, 64, 64, 0.80);
+        }
+    }
+    .planBox {
+        padding-top: 26px;
+        background: $colorM3;
+        border-radius: 10px;
+        overflow: hidden;
+        .ttl {
+            width: calc(310 / 350 * 100%);
+            margin: 0 auto;
+            padding: 15px calc(20px - .1em) 15px 20px;
+            background: #FFF;
+            border-radius: 6px;
+            text-align: center;
+            color: $colorM1;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 700;
+            letter-spacing: .1em;
+        }
+        .simWrap {
+            padding: 26px calc(20 / 350 * 100%);
+            display: flex;
+            flex-flow: column;
+            gap: 20px;
+            @include media(pc) {
+                font-family: $fontG_pc;
+                font-weight: 500;
+            }
+            @include media(sp) {
+                font-family: $fontG_sp;
+            }
+        }
+
+        .simHead {
+            display: none;
+/*
+            width: fit-content;
+            margin: 0 auto;
+            padding: 10px calc(16px - .1em) 10px 16px;
+            background: $colorBG2;
+            border-radius: 20px;
+            color: $themeColor4;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 700;
+            letter-spacing: .1em;
+*/
+        }
+        .setupRange {
+            background: rgba(#FFF, .2);
+        }
+        .toggle_open {
+            display: none;
+            & + .folder {
+                width: 100%;
+                max-height: 0;
+                margin: 0;
+                padding: 0;
+                opacity: 0;
+                transition: max-height .5s, opacity .5s;
+                & + .folder_bottom {
+                    margin-top: 0;
+                    &::before {
+                        content: none;
+                    }
+                    .btn_folder {
+                        background: #FFF;
+                        color: #FFF;
+                        transition: margin-top .2s, opacity .2s;
+                        .icon {
+                            &::before, &::after {
+                                background: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+            &:checked + .folder {
+                max-height: 120px;
+                opacity: 1;
+                & + .folder_bottom {
+                    overflow: hidden;
+                    .btn_folder {
+                        margin-top: -30px;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        .move {
+            padding: 13px calc(10 / 310 * 100%);
+            background: $colorBG2;
+            border-radius: 6px;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: .1em;
+            em {
+                color: $colorM2;
+                font-weight: 700;
+            }
+        }
+        .priceWrap {
+            padding: 26px calc(20 / 350 * 100%);
+            background: $colorM2;
+            display: flex;
+            @include media(pc) {
+                font-family: $fontG_pc;
+                font-weight: 500;
+            }
+            @include media(sp) {
+                font-family: $fontG_sp;
+            }
+        }
+        .priceUnit {
+            flex: 1 1 0;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            gap: 16px;
+            text-align: center;
+            color: $colorM2;
+            &.monitor {
+                .priceTtl {
+                    background: $colorY1;
+                }
+                .price {
+                    color: $colorY1;
+                }
+            }
+            & + .priceUnit {
+                margin-left: calc((32 / 310 * 100%) + 1px);
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    background: #A5A5A5;
+                    position: absolute;
+                    top: 0;
+                    left: calc((-16 / 138.5 * 100%) - 1px);
+                }
+            }
+        }
+        .priceTtl {
+            width: 100%;
+            padding: 6px 0 6px .1em;
+            background: $themeColor5;
+            border-radius: 10px;
+            color: $colorM2;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            white-space: nowrap;
+        }
+        .price {
+            display: flex;
+            gap: 2px;
+            white-space: nowrap;
+            color: $colorK4;
+            .yen {
+                align-self: flex-start;
+                font-family: "Outfit", sans-serif;
+                font-size: 14px;
+                line-height: 10px;
+                font-weight: 400;
+            }
+            .num {
+                font-family: "Outfit", sans-serif;
+                font-size: 24px;
+                line-height: 17px;
+                font-weight: 300;
+            }
+            .tax {
+                margin: -2px -2px -1px 0;
+                align-self: flex-end;
+                writing-mode: vertical-rl;
+                font-size: 10px;
+                transform-origin: left bottom;
+                transform: scale(.8);
+            }
+        }
+        .loan {
+            margin: -3px 0;
+            font-size: 10px;
+            line-height: 16px;
+            color: $colorK4;
+            dt {
+                margin-bottom: 4px;
+                font-weight: 700;
+            }
+        }
+    }
+
+
+
+
+    
+    
+
+
+    .guideMsg {
+        margin: 57px -.1em 16px 0;
+        text-align: center;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 700;
+        letter-spacing: .1em;
+        @include media(pc) {
+            font-family: $fontG_pc;
+        }
+        @include media(sp) {
+            font-family: $fontG_sp;
+        }
+    }
+    .contactBox {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 20px 20px 30px;
+        background: $themeColor1;
+        border-radius: 6px;
+        @include media(pc) {
+            font-family: $fontG_pc;
+            font-weight: 500;
+        }
+        @include media(sp) {
+            font-family: $fontG_sp;
+        }
+        .btn {
+            padding: 30px 0;
+            background: #fff;
+            border-radius: 6px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            text-align: center;
+            font-weight: 700;
+            cursor: pointer;
+            .tag {
+                margin-bottom: 16px;
+                padding: 6px calc(10px - .1em) 6px 10px;
+                background: $themeColor1;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 12px;
+                letter-spacing: .1em;
+            }
+            .txt {
+                margin: -5px -.1em -5px 0;
+                color: $themeColor1;
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: .1em;
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 2px;
+            }
+        }
+        .tel {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid $themeColor2;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            .tag {
+                margin-bottom: 20px;
+                padding: 8px calc(10px - .1em) 8px 10px;
+                background: $themeColor2;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 15px;
+                font-weight: 700;
+                letter-spacing: .1em;
+                white-space: nowrap;
+            }
+            .num {
+                margin: -6px -.05em -5px 0;
+                font-family: "Outfit", sans-serif;
+                font-size: 34px;
+                font-weight: 200;
+                letter-spacing: .05em;
+            }
+            .hour {
+                margin: 10px -.1em 0 0;
+                font-size: 12px;
+                letter-spacing: .1em;
+            }
+        }
+    }
+    .contactArea2 {
+        background-color: rgba(#403B35, .6);
+        padding-top: 80px;
+        padding-bottom: 50px;
+        & + section {
+            padding-top: 100px;
+        }
+        &::before {
+            .webp & {
+                background-image: url(../img/orthodontics/contact_bg.jpg.webp);
+            }
+            .no-webp & {
+                background-image: url(../img/orthodontics/contact_bg.jpg);
+            }
+        }
+        .guideMsg {
+            color: #FFF;
+            margin-top: -5px;
+            margin: -5px -.1em 5px 0;
+        }
+        .contactBox {
+            background: none;
+            .btn {
+                animation: ani_shadow 3s linear infinite;
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    display: inline-block;
+                    top: -180px;
+                    left: 0;
+                    width: 20px;
+                    height: 100%;
+                    background-color: #eeeeee;
+                    transition: 300ms;
+                    animation: ani_shiny 2.5s ease-in-out infinite;
+                }
+            }
+            .tel {
+                border-color: #FFF;            
+            }
+        }
+    }
+
+    main {
+        padding-top: 70px;
+        color: $colorK1;
+        font-family: "HigureGothic", sans-serif;
+        font-weight: 500;
+        >section {
+            padding: 0 0 100px;
+            background: $colorBG1;
+            >.wrapper {
+                width: calc(330 / 390 * 100%);
+                margin: 0 auto;
+            }
+        }
+    }
+    .breadcrumbs {
+        width: 100%;
+        padding: 0 calc(20 / 390 * 100%);
+        background: #fff;
+        color: #243832;
+        @include media(pc) {
+            font-family: $fontG_pc;
+            font-weight: 500;
+        }
+        @include media(sp) {
+            font-family: $fontG_sp;
+            font-weight: 400;
+        }
+        ol {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        li {
+            margin-right: -.05em;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: .05em;
+            &:first-child {
+                white-space: nowrap;
+            }
+            &:not(:last-child) {
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 12px;
+                    height: 14px;
+                    background: currentColor;
+                    mask: url(../img/child-orthodontics/bc_slash.svg) center/contain no-repeat;
+                    position: absolute;
+                    top: calc(50% - 7px);
+                    right: -15px;
+                }
+            }
+        }
+        a {
+            color: $colorLink;
+            text-decoration: underline;
+        }
+    }
+    .h1a {
+        width: 100%;
+        height: 430px;
+        margin-bottom: 60px;
+        padding-top: 16px;
+        background: #fff url(../img/child-orthodontics/h1a_bg.png) top/100% 408px no-repeat;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        .pic {
+            display: block;
+            width: calc(350 / 390 * 100%);
+            height: 190px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+        }
+        .ttlGrp {
+            width: calc(350 / 390 * 100%);
+            min-height: 194px;
+            max-height: 202px;
+            padding: 46px 0 65px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            gap: 26px;
+            color: $colorM1;
+            font-weight: 700;
+        }
+        .ttl {
+            margin: -11px -.12em -10px 0;
+            font-size: 24px;
+            line-height: 38px;
+            letter-spacing: .12em;
+            .f26 {
+                font-size: 26px;
+                letter-spacing: .06em;
+            }
+            .f30 {
+                font-size: 30px;
+                letter-spacing: -.02em;
+
+            }
+        }
+        .sub {
+            margin: -2px -.12em -2px 0;
+            font-size: 14px;
+            letter-spacing: .12em;
+        }
+        .scroll {
+            width: 100%;
+            height: 22px;
+            margin-top: auto;
+            background: $colorM1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .16em;
+            &::before, &::after {
+                content: '';
+                display: block;
+                width: 7px;
+                height: 7px;
+                margin-bottom: -1px;
+                background: currentColor;
+                mask: url(../img/child-orthodontics/arw_sc.svg) center/contain no-repeat;
+            }
+            &::after {
+                margin-left: -.16em;
+            }
+        }
+    }
+    .h2a {
+        width: 100%;
+        margin-bottom: 60px;
+        text-align: center;
+        color: $colorM1;
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 44px;
+            background: url(../img/child-orthodontics/h2a_bg.png.webp) top/330px 43px no-repeat;
+            border-bottom: 1px solid currentColor;
+            .no-webp & {
+                background-image: url(../img/child-orthodontics/h2a_bg.png);
+            }
+        }
+        .ttlGrp {
+            width: 100%;
+            height: 174px;
+            padding-bottom: 3px;
+            background: #fff;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .ttl {
+            margin: -11px -.12em -10px 0;
+            font-size: 22px;
+            line-height: 36px;
+            font-weight: 700;
+            letter-spacing: .12em;
+        }
+        .h2a_f {
+            width: 100%;
+            height: 7px;
+            margin-top: -3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            white-space: nowrap;
+            &::before, &::after {
+                content: '';
+                flex: auto;
+                width: 50%;
+                height: 1px;
+                background: currentColor;
+            }
+            span {
+                margin: -2px -.1em -1px 0;
+                &::before {
+                    content: 'A LIFELONG GIFT FOR A CHILD';
+                }
+            }
+        }
+    }
+    .h2b {
+        color: #FFF;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 36px; /* 163.636% */
+        letter-spacing: .12em;
+        margin: -10px -.1em -11px 0;
+    }
+    .h2c {
+        color: $colorM1;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px; /* 160% */
+        letter-spacing: 2.4px;
+        margin: -9px -.1em -9px 0;
+        &.colorK1 {
+            color: $colorK1;
+        }
+        &.colorM1 {
+            color: $colorM1;
+        }
+    }
+    .h3a {
+        width: 100%;
+        min-height: 94px;
+        margin: 60px 0 40px;
+        padding: 12px 0 12px 70px;
+        background: url(../img/child-orthodontics/h3a_bg.png) left/54px 54px no-repeat;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        color: $colorM1;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 700;
+        letter-spacing: .1em;
+        position: relative;
+        &::before, &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: url(../img/child-orthodontics/dashed_line.svg) -1px center/4px 1px repeat-x;
+            position: absolute;
+            left: 0;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        @include media(xs) {
+            br {
+                display: none;
+            }
+        }
+    }
+    .h4a {
+        .icon {
+            display: block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: -30px auto -40px;
+            position: relative;
+            z-index: 1;
+            &::after {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 30px;
+                background: $colorM1;
+                mask: url(../img/child-orthodontics/top/icon_iroha.png) center/contain no-repeat;
+                position: absolute;
+                inset: 20px 0 auto 0;
+                margin: 0 auto;
+            }
+        }
+        .ttl {
+            color: $colorK1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 30px; /* 166.667% */
+            letter-spacing: 0.12em;
+            margin: -8px -.1em -9px 0;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .h4b {
+        padding: 20px 0;
+        position: relative;
+        .ttl {
+            color: $colorK1;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 30px; /* 187.5% */
+            letter-spacing: .1em;
+            margin: -9px -.1em -10px 0;
+        
+        }
+        &::before, &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $colorK2;
+            mask: url(../img/child-orthodontics/dashed_line.svg) -1px center/4px 1px repeat-x;
+            position: absolute;
+            left: 0;
+            opacity: .5;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+
+    }
+    .h5a {
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            background-color: $colorK2;
+            position: absolute;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            background: url(../img/child-orthodontics/icon_h5a.svg) center/contain no-repeat;
+            inset: -2px auto auto 0;
+        }
+
+        .ttl {
+            color: $colorK1;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 26px; /* 173.333% */
+            letter-spacing: .1em;
+            margin: -8px -.1em -8px 0;
+            border-bottom: 1px solid  $colorK4;
+            padding: 0 0 16px 26px;
+        }
+    }
+
+    .txta {
+        margin: -6px -.12em -6px 0;
+        text-align: justify;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: .12em;
+        +.txta {
+            margin-top: 20px;
+        }
+        &.center {
+            text-align: center;
+        }
+        &.right {
+            text-align: right;
+        }
+        em {
+            background: $colorY1;
+            font-weight: 700;
+        }
+        &.colorW,
+        .colorW {
+            color: #fff;
+        }
+        &.colorY3,
+        .colorY3 {
+            color: $colorY3;
+        }
+        &.strong, 
+        .strong {
+            font-weight: 900;
+        }
+        &.link,
+        .link {
+            text-decoration: underline;
+        }
+    }
+    .pica {
+        display: block;
+        width: fit-content;
+        max-width: min(350 / 330 * 100%, 350px);
+        margin: 0 max(-10 / 330 * 100%, 50% - 175px);
+        border-radius: 12px;
+        overflow: hidden;
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .pica2 {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 12px;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .picb {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background: $colorBOX;
+        border-radius: 12px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .picc {
+        display: block;
+        text-align: center;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        &.radius12 img,
+        &.radius12 video {
+            border-radius: 12px;
+        }
+    }
+    .picd {
+        display: block;
+        border-radius: 8px;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .sv_doctor {
+        width: calc(350 / 330 * 100%);
+        max-width: 350px;
+        margin: 0 max(-10 / 330 * 100%, 50% - 175px);
+        padding: 10px;
+        background: $colorBOX;
+        border-radius: 12px;
+        box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+        display: flex;
+        align-items: center;
+        gap: 23px;
+        color: $colorY3;
+        &:not(:first-child) {
+            margin-top: 60px;
+        }
+        .portrait {
+            display: block;
+            width: 120px;
+            border-radius: 6px;
+            overflow: hidden;
+            @media (max-width: 339px) {
+                width: 100px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .balloon {
+            width: fit-content;
+            margin-bottom: 20px;
+            padding: 7px calc(11px - .1em) 7px 11px;
+            background: #fff;
+            border: 1px solid currentColor;
+            border-radius: 16px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            white-space: nowrap;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 8px;
+                height: 4px;
+                background: currentColor;
+                clip-path: polygon(0 50%, 100% 0, 100% 100%);
+                position: absolute;
+                top: calc(50% - 2px);
+                left: -8px;
+            }
+        }
+        .txtGrp {
+            padding-left: 15px;
+            font-weight: 700;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 2px;
+                height: 100%;
+                background: currentColor;
+                border-radius: 2px;
+                position: absolute;
+                top: 0;
+                left: 1px;
+            }
+        }
+        .clinic {
+            margin: -2px 0 10px;
+            font-size: 12px;
+            letter-spacing: .1em;
+        }
+        .name {
+            margin: -3px 0;
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            font-size: 20px;
+            letter-spacing: .1em;
+        }
+        .job {
+            margin: 0 -.1em 1px 0;
+            font-size: 12px;
+            letter-spacing: .1em;
+        }
+    }
+    .tocBox {
+        width: calc(350 / 330 * 100%);
+        margin: 60px calc(-10 / 330 * 100%) 0;
+        padding: 30px calc(30 / 330 * 100%);
+        background: $colorBOX;
+        border-radius: 12px;
+        box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+        .ttl {
+            margin: -2px 0 26px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba($colorK1, .5);
+            display: flex;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            &::before {
+                content: '';
+                width: 17px;
+                height: 13px;
+                margin-top: 2px;
+                background: currentColor;
+                mask: url(../img/child-orthodontics/toc_ico_ttl.svg) center/contain no-repeat;
+            }
+        }
+        .list {
+            display: flex;
+            flex-flow: column;
+            gap: 20px;
+        }
+        .link {
+            min-height: 26px;
+            margin: -4px -.1em -4px 0;
+            padding-left: 24px;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: .1em;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 18px;
+                height: 18px;
+                background: $colorM1 url(../img/child-orthodontics/toc_ico_link.svg) center 7px/8px 6px no-repeat;
+                border-radius: 50%;
+                position: absolute;
+                top: 4px;
+                left: 0;
+            }
+        }
+    }
+
+    .tglBox {
+        width: calc(350 / 330 * 100%);
+        margin: 40px calc(-10 / 330 * 100%) 0;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0px 10px 20px 0px rgba(90, 90, 90, 0.10);
+        +.tglBox {
+            margin-top: 20px;
+        }
+        .tglBox_open {
+            display: none;
+        }
+        .tglHead {
+            background: #fff;
+            transition: .5s;
+        }
+        .tglHeadWrap {
+            padding: 20px calc(20 / 350 * 100%);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            .txtGrp {
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .tag {
+                width: fit-content;
+                padding: 4px calc(10px - .1em) 4px 10px;
+                background: $colorY2;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 12px;
+                font-weight: 900;
+                letter-spacing: .1em;
+                transition: .5s;
+            }
+            .txt {
+                margin: -8px -.1em -7px 0;
+                font-size: 16px;
+                line-height: 26px;
+                font-weight: 700;
+                letter-spacing: .1em;
+                transition: .5s;
+            }
+            .icon {
+                flex: none;
+                display: block;
+                width: 30px;
+                height: 30px;
+                margin-left: auto;
+                border: 1px solid currentColor;
+                border-radius: 50%;
+                color: $colorM2;
+                transition: .5s;
+                position: relative;
+                &::before, &::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: currentColor;
+                    mask: url(../img/child-orthodontics/icon_tgl.svg) center/10px 2px no-repeat;
+                    position: absolute;
+                    inset: 0;
+                }
+                &::after {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        .tglBody {
+            overflow: hidden;
+            background: #fff;
+        }
+        .tglBodyWrap {
+            margin-top: -3000px;
+            padding: 30px calc(30 / 350 * 100%);
+            transition: .5s;
+        }
+        &:has(.tglBox_open:checked) {
+            box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+            .tglHead {
+                background: $colorM2;
+            }
+            .tglHeadWrap {
+                .tag {
+                    background: $colorY1;
+                    border-radius: 10px;
+                    color: $colorM2;
+                }
+                .txt {
+                    color: #fff;
+                }
+                .icon {
+                    color: $colorY1;
+                    &::after {
+                        opacity: 0;
+                    }
+                }
+            }
+            .tglBodyWrap {
+                margin-top: 0;
+            }
+        }
+        .picc {
+            &:not(:last-child) {
+                margin-bottom: 26px;
+            }
+        }
+    }
+    .listBox {
+        width: calc(350 / 330 * 100%);
+        margin: 0 calc(-10 / 330 * 100%);
+        padding: 40px calc(30 / 330 * 100%) 30px;
+        background: $colorBOX;
+        border-radius: 12px;
+        box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+        &:not(:first-child) {
+            margin-top: 40px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+        &.mtb0 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .ttl {
+            margin: -8px 0 30px;
+            padding: 0 0 13px .12em;
+            border-bottom: 1px solid currentColor;
+            text-align: center;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 700;
+            letter-spacing: .12em;
+        }
+        .list {
+            .item {
+                margin: -3px 0;
+                padding-left: 26px;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 700;
+                letter-spacing: .1em;
+                position: relative;
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                    padding-bottom: 10px;
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background: url(../img/child-orthodontics/dashed_line.svg) -1px center/4px 1px repeat-x;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        opacity: .5;
+                    }
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                }
+            }
+            &.posi .item::before {
+                background: #F68A90 url(../img/child-orthodontics/check.svg) center/8px 6px no-repeat;
+            }
+            &.nega .item::before {
+                background: #548EA6 url(../img/child-orthodontics/cross.svg) center/6px 6px no-repeat;
+            }
+        }
+        .list2 {
+            .item {
+                margin-top: -5px;
+                padding: 0 0 11px 26px;
+                border-bottom: 1px solid $colorK4;
+                font-size: 15px;
+                line-height: 26px;
+                font-weight: 700;
+                letter-spacing: .1em;
+                position: relative;
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    border: 5px solid $colorY3;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                }
+            }
+        }
+    }
+    .boxa {
+        width: calc(350 / 330 * 100%);
+        margin: 0 calc(-10 / 330 * 100%);
+        padding: 40px calc(30 / 330 * 100%) 30px;
+        background: $colorBOX;
+        border-radius: 12px;
+        box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+        .ttl {
+            margin: -8px 0 30px;
+            padding: 0 0 13px .12em;
+            border-bottom: 1px solid currentColor;
+            text-align: center;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 700;
+            letter-spacing: .12em;
+        }
+    }
+
+    .offer_moniter {
+        width: 100%;
+        height: 408px;
+        padding-top: 90px;
+        background: #fff url(../img/child-orthodontics/h1a_bg.png) top/100% 408px no-repeat;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        .txt1 {
+            color: $colorM1;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 10px;
+            letter-spacing: .1em;
+            padding-bottom: 8px;
+            border-bottom: 1px solid $colorM1;
+        }
+        .txt2 {
+            color: $colorM1;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 100%; /* 26px */
+            letter-spacing: .1em;
+        }
+        .price1 {
+            display: flex;
+            flex-flow: column;
+            gap: 10px;
+            align-items: center;
+            .txtGrp1 {
+                display: flex;
+                height: 15px;
+                line-height: 15px;
+                padding: 0 6px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                background: $colorAR;
+                color: #FFF;
+                font-size: 10px;
+                font-weight: 700;
+                line-height: 100%; /* 10px */
+            }
+            .txtGrp2 {
+                display: flex;
+                justify-content: center;
+                gap: 4px;
+                height: 25px;
+                line-height: 25px;
+                .text1 {
+                    color: $colorAR;
+                    font-family: Outfit;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    margin-top: -5px;
+                }
+                .text2 {
+                    color: $colorAR;
+                    font-family: Outfit;
+                    font-size: 36px;
+                    font-weight: 400;
+                    letter-spacing: -0.72px;
+                }
+                .text3 {
+                    display: inline-block;
+                    width: 36px;
+                    height: 25px;
+                    color: $colorAR;
+                    font-family: Outfit;
+                    font-size: 18px;
+                    font-weight: 600;
+                    position: relative;
+                    &::before, &::after {
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        background-color: $colorAR;
+                        position: absolute;
+                        left: 0;
+                    }
+                    &::before {
+                        top: 0;
+                    }
+                    &::after {
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+        .btnb3 {
+        }
+    }
+
+    .meritArea {
+        background: $colorM3;
+        margin-top: -63px;
+        padding: 60px 0;
+
+        .boxMerit {
+            padding: 35px 0 0 16px;
+            >.inner {
+                margin: 0 auto;
+                width: 314px;
+                min-height: 120px;
+                border-radius: 6px;
+                background: #FFF;
+                box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+                padding: 10px;
+                position: relative;
+                .boxHead {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    width: 64px;
+                    height: 64px;
+                    padding: 3px;
+                    border-radius: 50%;
+                    background-color: $colorY1;
+                    position: absolute;
+                    inset: -32px auto auto -13px;
+                    
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        border: 1px solid $colorY1;
+                        position: absolute;
+                        inset: -3px auto auto -3px;
+
+                    
+                    }
+                    .txt {
+                        color: $colorM1;
+                        font-family: Overlock;
+                        font-size: 10px;
+                        font-style: italic;
+                        font-weight: 900;
+                        line-height: 100%; /* 10px */
+                        letter-spacing: .06em;
+                    }
+                    .no {
+                        color: $colorM1;
+                        font-family: Overlock;
+                        font-size: 20px;
+                        font-style: italic;
+                        font-weight: 900;
+                        line-height: 100%;
+                    }
+                }
+                .boxMain {
+                    display: flex;
+                    gap: 14px;
+                    align-items: center;
+                    .pic1 {
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 6px;
+                        overflow: hidden;
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                    .txt1 {
+                        color: $colorK1;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 28px; /* 155.556% */
+                        letter-spacing: .1em;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .link_related {
+        margin-top: 26px;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+        gap: 10px;
+        .item {
+            width: fit-content;
+            min-height: 29px;
+            margin: -4px -.1em -3px 0;
+            padding-left: 32px;
+            display: flex;
+            align-items: center;
+            color: $colorLink;
+            font-size: 15px;
+            line-height: 22px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 22px;
+                height: 12px;
+                background: currentColor;
+                mask: url(../img/child-orthodontics/arw_link.svg) center/contain no-repeat;
+                position: absolute;
+                top: calc(50% - 6px);
+                left: 0;
+            }
+        }
+    }
+    .link_nextPage {
+        width: calc(350 / 330 * 100%);
+        margin: 40px calc(-10 / 330 * 100%) 0;
+        padding: 30px calc(20 / 330 * 100% + 88px) 30px calc(30 / 330 * 100%);
+        background: $colorM1;
+        border-radius: 6px;
+        box-shadow: 0px 1px 1px 0px rgba(41, 97, 68, 0.10);
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 20px;
+        position: relative;
+        .ttl {
+            margin: -1px 0;
+            color: $colorY1;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            &::after {
+                content: '';
+                display: inline-block;
+                vertical-align: top;
+                width: 16px;
+                height: 1lh;
+                margin-left: calc(5px - .1em);
+                background: currentColor;
+                mask: url(../img/child-orthodontics/arw_next.svg) center/contain no-repeat;
+            }
+        }
+        .txt {
+            margin: -9px -.1em -8px 0;
+            color: #fff;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: 68px;
+            height: calc(100% - 60px);
+            border-left: 1px solid rgba(#fff, .3);
+            background: url(../img/child-orthodontics/next.png) right/48px 13px no-repeat;
+            position: absolute;
+            top: 30px;
+            right: calc(20 / 350 * 100%);
+        }
+        & + .link_nextPage {
+            margin-top: 10px;
+        }
+    }
+    #child-ortho_footer_nav {
+        font-weight: 700;
+        .ttl {
+            margin: 40px 0 30px;
+            padding: 18px 0 18px .1em;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: .1em;
+            position: relative;
+            &::before, &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: $colorK2;
+                mask: url(../img/child-orthodontics/dashed_line.svg) -1px center/4px 1px repeat-x;
+                position: absolute;
+                left: 0;
+            }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                bottom: 0;
+            }
+        }
+        .list {
+            display: flex;
+            flex-flow: column;
+            gap: 16px;
+        }
+        .link {
+            min-height: 29px;
+            margin: -4px -.1em -3px 0;
+            padding-left: 32px;
+            display: flex;
+            align-items: center;
+            color: $colorLink;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: .1em;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 22px;
+                height: 12px;
+                background: currentColor;
+                mask: url(../img/child-orthodontics/arw_link.svg) center/contain no-repeat;
+                position: absolute;
+                top: calc(50% - 6px);
+                left: 0;
+            }
+        }
+    }
+}
+
+body#child-orthodontics {
+    #fv {
+        padding-bottom: 93px;
+        background: url(../img/child-orthodontics/top/fv_bg1.png.webp) right 40px/min(105 / 390 * 100%, 126px) auto no-repeat,
+                    url(../img/child-orthodontics/top/fv_bg2.png.webp) left 297px/min(163 / 390 * 100%, 196px) auto no-repeat,
+                    url(../img/child-orthodontics/top/fv_bg3.png.webp) right 423px/clamp(151px, 151 / 390 * 100%, 181px) auto no-repeat $colorM1;
+        color: #fff;
+        position: relative;
+        .no-webp & {
+            background-image: url(../img/child-orthodontics/top/fv_bg1.png),
+                              url(../img/child-orthodontics/top/fv_bg2.png),
+                              url(../img/child-orthodontics/top/fv_bg3.png);
+        }
+        .txt1 {
+            display: block;
+            width: min(135px, 135 / 390 * 100%);
+            position: absolute;
+            top: 65px;
+            left: calc(20 / 390 * 100%);
+            z-index: 2;
+        }
+        .img1 {
+            display: block;
+            width: 136px;
+            margin: 0 auto;
+            filter: drop-shadow(0px 0px 16px rgba(7, 23, 15, 0.30));
+            position: relative;
+            z-index: 1;
+        }
+        .ttl1 {
+            display: block;
+            width: 322px;
+            margin: -6px calc(50% - 161px) 0;
+        }
+        .ttl2 {
+            width: 222px;
+            margin: -12px auto 0;
+            filter: drop-shadow(0px 0px 16px rgba(7, 23, 15, 0.30));
+            img {
+                width: 100%;
+            }
+        }
+        .txt2 {
+            display: block;
+            width: 155px;
+            margin: 29px auto 0;
+        }
+        .txt3 {
+            margin: 21px -.16em -9px 0;
+            text-align: justify;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: .16em;
+        }
+    }
+    #sec1 {
+        .sec_ttl {
+            width: 100%;
+            height: 70px;
+            background: $colorY3;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .16em;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 43px;
+                background: url(../img/child-orthodontics/h2a_bg.png.webp) top/330px 43px no-repeat;
+                position: absolute;
+                top: -43px;
+                left: 0;
+                .no-webp & {
+                    background-image: url(../img/child-orthodontics/h2a_bg.png);
+                }
+            }
+            .ttl1 {
+                margin: -2px -.16em -2px 0;
+                color: #fff;
+            }
+            .ttl2 {
+                width: fit-content;
+                height: 22px;
+                padding: 4px calc(8px - .16em) 4px 8px;
+                background: #fff;
+                border-radius: 11px;
+                color: $colorY3;
+                position: relative;
+                &::before, &::after {
+                    content: '';
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    background: #fff;
+                    mask: url(../img/child-orthodontics/arw_sc.svg) center/contain no-repeat;
+                    position: absolute;
+                    top: calc(50% - 5px);
+                }
+                &::before {
+                    left: -24px;
+                }
+                &::after {
+                    right: -24px;
+                }
+            }
+        }
+        .lifestage {
+            width: 100%;
+            min-height: 250px;
+            margin-bottom: 1px;
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: rgba($colorM1, .7);
+                position: absolute;
+                inset: 0;
+                transition: .5s;
+                pointer-events: none;
+            }
+            .toggle_open {
+                display: none;
+            }
+            .bg {
+                display: block;
+                width: 100%;
+                height: 250px;
+                position: relative;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 110px;
+                    background: linear-gradient(rgba($colorBG1, 0), $colorBG1);
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    opacity: 0;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .icon {
+                display: block;
+                width: 60px;
+                margin: -209px auto 20px;
+                filter: brightness(0) invert(87%) sepia(100%) saturate(485%) hue-rotate(321deg) contrast(104%);
+                position: relative;
+                z-index: 1;
+                transition: margin-top .5s;
+            }
+            .ttl {
+                margin-bottom: 30px;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                gap: 16px;
+                text-align: center;
+                color: #fff;
+                font-weight: 700;
+                position: relative;
+                z-index: 1;
+                .jp {
+                    margin: -4px -.12em -3px 0;
+                    font-size: 22px;
+                    letter-spacing: .12em;
+                }
+                .en {
+                    margin: -2px -.1em -1px 0;
+                    font-size: 10px;
+                    letter-spacing: .1em;
+                }
+            }
+            .folder {
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: .5s;
+            }
+            .btn_tgl {
+                display: block;
+                width: 100%;
+                height: 250px;
+                margin-top: -189px;
+                padding-top: 179px;
+                color: $colorY1;
+                position: relative;
+                z-index: 1;
+            }
+            .icon_tgl {
+                display: block;
+                width: 30px;
+                height: 30px;
+                margin: 0 auto;
+                border: 1px solid currentColor;
+                border-radius: 50%;
+                position: relative;
+                &::before, &::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: currentColor;
+                    mask: url(../img/child-orthodontics/icon_tgl.svg) center/10px 2px no-repeat;
+                    position: absolute;
+                    inset: 0;
+                }
+                &::after {
+                    transform: rotate(90deg);
+                }
+            }
+            &:has(.toggle_open:checked) {
+                margin-bottom: 30px;
+                &::after {
+                    opacity: 0;
+                }
+                .bg::after {
+                    opacity: 1;
+                }
+                .icon {
+                    margin-top: -54px;
+                    filter: none;
+                }
+                .ttl {
+                    color: $colorM1;
+                }
+                .folder {
+                    max-height: 528px;
+                    padding-bottom: 30px;
+                    opacity: 1;
+                }
+                .btn_tgl {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 auto;
+                    padding-top: 0;
+                    border-radius: 50%;
+                    color: $colorM1;
+                }
+                .icon_tgl::after {
+                    opacity: 0;
+                }
+            }
+        }
+        .lifestage_list {
+            width: calc(330 / 390 * 100%);
+            margin: 0 auto;
+            li {
+                padding: 12px min(20px - .1em ,20 / 330 * 100% - .1em) 12px min(64px, 34 / 330 * 100% + 30px);
+                background: #fff;
+                border-radius: 12px;
+                box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+                font-size: 15px;
+                line-height: 26px;
+                font-weight: 700;
+                letter-spacing: .1em;
+                position: relative;
+                +li {
+                    margin-top: 10px;
+                }
+                &::before {
+                    content: '';
+                    flex: none;
+                    width: 30px;
+                    height: 30px;
+                    background: $colorY2 url(../img/child-orthodontics/top/lifestage_list_ico.svg) center 9px/16px 14px no-repeat;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: calc(50% - 15px);
+                    left: min(20px, 20 / 330 * 100%);
+                }
+                span {
+                    display: inline-block;
+                }
+                @include media(xs) {
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+    #sec2 {
+        .tocList {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 90px;
+        }
+        .tocItem {
+            width: 100%;
+            min-height: 180px;
+            aspect-ratio: 129 / 180;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            position: relative;
+            padding-top: 7.5px;
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: rgba($colorM1, .7);
+                position: absolute;
+                inset: 0;
+                transition: .5s;
+                pointer-events: none;
+            }
+            .bg {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                inset: 0 0 0 0;
+                margin: auto;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 110px;
+                    background: linear-gradient(rgba($colorBG1, 0), $colorBG1);
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    opacity: 0;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .icon {
+                display: block;
+                width: 36px;
+                height: 36px;
+                filter: brightness(0) invert(87%) sepia(100%) saturate(485%) hue-rotate(321deg) contrast(104%);
+                position: relative;
+                z-index: 1;
+            }
+            .ttl {
+                margin-top: 20px;
+                margin-bottom: 27px;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                gap: 16px;
+                text-align: center;
+                position: relative;
+                z-index: 1;
+                .jp {
+                    color:#FFF;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 22px; /* 157.143% */
+                    letter-spacing: 0.04em;
+                }
+            }
+            .arrow_d {
+                display: block;
+                width: 12px;
+                height: 10px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+                background: $colorY1;
+                mask: url(../img/child-orthodontics/top/arrow_d.svg) center/12px 10px no-repeat;
+            }
+
+        }
+        .irohaBox {
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+            max-width: 350px;
+            padding: 10px 10px 30px 10px;
+            border-radius: 12px;
+            background: #FFF;
+            box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+            .inner {
+                max-width: 270px;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+    #sec3 {
+        .h2a {
+            margin-bottom: -4px;
+            position: relative;
+            z-index: 1;
+        }
+        .h2a + .picc {
+            margin-bottom: 60px;
+        }
+    }
+    #sec4 {
+        .planList {
+            width: calc( 350 / 390 * 100% );
+            margin: 0 auto;
+        }
+        .planItem {
+            width: 100%;
+            aspect-ratio: 350 / 460;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+            position: relative;
+            .bg {
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .textGrp {
+                display: flex;
+                flex-flow: column;
+                gap: 20px;
+                position: absolute;
+                inset: auto auto 30px 30px;
+                .textGrp1 {
+                    width: 69px;
+                    height: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    border-radius: 4px;
+                    background: $colorY2;
+                    color: #FFF;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 100%; /* 12px */
+                    letter-spacing: .2em;
+                }
+                .textGrp2 {
+                    display: flex;
+                    gap: 12px;
+                    .icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 4px;
+                        border: 1px solid $colorK4;
+                        background: #FFF;
+                        position: relative;
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 36px;
+                            height: 36px;
+                            background: $colorM1;
+                            mask: url(../img/child-orthodontics/lifestage1.png) center/36px 36px no-repeat;
+                        }
+                    }
+                    .text2 {
+                        display: flex;
+                        flex-flow: column;
+                        justify-content: center;
+                        gap: 12px;
+                        color: $colorM1;
+                        font-weight: 700;
+                        line-height: 100%; /* 22px */
+                        letter-spacing: .1em;
+                        .text2_1 {
+                            font-size: 22px;
+                        }
+                        .text2_2 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .textGrp3 {
+                    color: $colorM1;
+                    height: 18px;
+                    line-height: 100%; /* 18px */
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 2px;
+                    .yen {
+                        font-size: 18px;
+                        font-weight: 300;
+                        margin-top: -4px;
+                    }
+                    .num {
+                        font-family: Outfit;
+                        font-size: 26px;
+                        font-weight: 300;
+                    }
+                    .zei {
+                        font-size: 8px;
+                        font-weight: 500;
+                        padding-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body#child-ortho_formation_timing {
+}
+
+body#child-ortho_timing {
+}
+
+body#child-ortho_cost {
+}
+
+body#child-ortho_demerit {
+    #sec3 {
+        .pictxt {
+            width: 270px;
+            margin: 40px auto 0;
+            +.pictxt {
+                margin-top: 30px;
+            }
+            .pica {
+                width: 100%;
+                margin: 0;
+            }
+            .note {
+                margin: 14px -.12em -2px 0;
+                font-size: 12px;
+                letter-spacing: .12em;
+            }
+        }
+    }
+}
+
+body#first_phase {
+    #sec1 {
+        .h2c.colorK1 {
+            color: $colorB1;
+        }
+    }
+}
+
+body#child-ortho_mft {
+    .picb {
+        background-color: #fff;
+    }
+
+    #secFv {
+        padding-bottom: 0;
+        .pic {
+            max-height: 235px;
+            max-width: 350px;
+            height: auto;
+            aspect-ratio: 350 / 235;
+            margin-bottom: -45px;
+        }
+        .h1a {
+            margin-bottom: 0;
+        }
+    }
+    #sec1  {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 0;
+        >.bg {
+            display: block;
+            width: 344px;
+            height: 343px;
+            background: url(../img/child-orthodontics/mft/issuebg.svg) center/contain no-repeat;
+            position: absolute;
+            inset: -171px 0 auto 0;
+            margin: 0 auto;
+        }
+        .inner1 {
+            background: linear-gradient(180deg, #0CF 0%, #2DC827 50.48%, #FC9C15 100%);
+            padding-top: 80px;
+            padding-bottom: 60px;
+            >.wrapper {
+                width: calc(330 / 390 * 100%);
+                margin: 0 auto;
+            }
+        }
+        .inner2 {
+            background: linear-gradient(180deg, #FC9C15 0%, #F26431 100%);
+            padding-bottom: 100px;
+            >.wrapper {
+                width: calc(330 / 390 * 100%);
+                margin: 0 auto;
+            }
+        }
+        .img1 {
+            display: block;
+            width: 108px;
+            height: 126px;
+            margin: 0 auto;
+            position: relative;
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        .msgTtl {
+            height: 290px;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-end;
+            padding-bottom: 30px;
+            gap: 26px;
+            position: relative;
+            background: url(../img/child-orthodontics/mft/messagebg.png.webp) top right/290px 290px no-repeat;
+            .no-webp & {
+                background-image: url(../img/child-orthodontics/mft/messagebg.png);
+            }
+            .sub {
+                color: #FFF;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 100%; /* 12px */
+                letter-spacing: 1.92px;
+                margin: -2px -.1em -2px 0;
+            }
+            .ttl {
+                color: #FFF;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 34px; /* 170% */
+                letter-spacing: 2.4px;
+                margin: -12px -.1em -12px 0;
+            }
+        }
+        .msgTxt {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 30px; /* 187.5% */
+            letter-spacing: .12em;
+            margin: -9px -.1em -10px 0;
+            &.right {
+                text-align: right;
+            }
+        }
+        .msgList {
+            width: 290px;
+            margin: 0 auto;
+            >.item {
+                min-height: 20px;
+                background: url(../img/child-orthodontics/mft/icon_msghead.svg) center left/19px 20px no-repeat;
+                padding: 20px 0 20px 36px; 
+                position: relative;
+                .txt {
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 26px; /* 162.5% */
+                    letter-spacing: .12em;
+                    margin: -7px -.1em -8px 0;
+                }
+                &:first-child::before {
+                    content: '';
+                    display: block;
+                    width: 292px;
+                    height: 2px;
+                    position: absolute;
+                    inset: 1px 0 auto 0;
+                    background: url(../img/child-orthodontics/mft/msg_line.svg) center center/contain repeat-x;
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 292px;
+                    height: 2px;
+                    position: absolute;
+                    inset: auto 0 1px 0;
+                    background: url(../img/child-orthodontics/mft/msg_line.svg) center center/contain repeat-x;
+                }
+            }
+        }
+    }
+    #sec2 {
+
+    }
+}
+
+
+body.child-plan {
+    #secFv {
+        padding-bottom: 0;
+    }
+    .planItem {
+        width: 100%;
+        aspect-ratio: 390 / 499;
+        position: relative;
+        .bg {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .textGrp {
+            display: flex;
+            flex-flow: column;
+            gap: 16px;
+            position: absolute;
+            inset: auto auto 30px 30px;
+            .textGrp1 {
+                width: 69px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                background: $colorM1;
+                color: #FFF;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%; /* 12px */
+                letter-spacing: .2em;
+            }
+            .textGrp2 {
+                display: flex;
+                gap: 12px;
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 4px;
+                    border: 1px solid $colorK4;
+                    background: #FFF;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 36px;
+                        height: 36px;
+                        background: $colorM1;
+                        mask: url(../img/child-orthodontics/lifestage1.png) center/36px 36px no-repeat;
+                    }
+                }
+                .text2 {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                    gap: 12px;
+                    color: $colorM1;
+                    font-weight: 700;
+                    line-height: 100%; /* 22px */
+                    letter-spacing: .1em;
+                    .text2_1 {
+                        font-size: 22px;
+                    }
+                    .text2_2 {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .textGrp3 {
+                display: flex;
+                padding: 16px 20px;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 10px;
+                border-radius: 4px;
+                background: $colorY3;
+                color: #fff;
+                .text1 {
+                    display: flex;
+                    height: 19px;
+                    padding: 0 8px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 24px;
+                    background-color: #FFF;
+
+                    color: $colorY3;
+                    font-size: 10px;
+                    font-weight: 900;
+                    line-height: 100%; /* 10px */
+                    letter-spacing: .1em;
+
+                }
+                .txtGrp3_1 {
+                    display: flex;
+                    height: 21px;
+                    line-height: 21px;
+                    align-items: flex-start;
+                    .txt {
+                        font-family: Outfit;
+                        font-size: 12px;
+                        font-weight: 600;
+                        margin-right: 8px;
+                    }
+                    .yen {
+                        font-size: 18px;
+                        font-weight: 300;
+                        margin-top: -4px;
+                        margin-right: 2px;
+                    }
+                    .num {
+                        font-family: Outfit;
+                        font-size: 26px;
+                        font-weight: 300;
+                        margin-right: 2px;
+                    }
+                    .zei {
+                        font-size: 8px;
+                        font-weight: 500;
+                        padding-top: 8px;
+                    }
+                }
+                .comment1 {
+                    display: block;
+                    height: 6px;
+                    font-size: 9px;
+                    font-weight: 500;
+                    line-height: 6px;
+                }
+            }
+        }
+
+        .priceGrp2 {
+            width: 100%;
+            height: 93px;
+            display: flex;
+            padding: 16px;
+            gap: 12px;
+            border-radius: 6px;
+            background: #FFF;
+            box-shadow: 0px 1px 1px 0px rgba(90, 90, 90, 0.20);
+            position: relative;
+            .price1 {
+                height: 49px;
+                width: 144px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                .txt1 {
+                    display: inline-block;
+                    width: 12px;
+                    height: 22px;
+                    color: $colorK1;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 15px;
+                    margin-top: -10px;
+                }
+                .num {
+                    color: $colorAR;
+                    font-family: Outfit;
+                    font-size: 38px;
+                    font-weight: 300;
+                    line-height: 100%; /* 38px */
+                    margin-left: 6px;
+                }
+                .txt2 {
+                    color: $colorAR;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 100%; /* 20px */
+                    margin-left: 2px;
+                    padding-top: 13px;
+                }
+                .zei {
+                    color: $colorK1;
+                    font-size: 8px;
+                    font-weight: 500;
+                    line-height: 100%; /* 8px */
+                    position: absolute;
+                    inset: 10px auto auto 84px;
+                }
+                .txt3 {
+                    color: $colorK1;
+                    font-size: 10px;
+                    font-weight: 700;
+                    line-height: 100%; /* 10px */
+                    position: absolute;
+                    inset: 10px auto auto 134px;
+                }
+            }
+            .price2 {
+                height: 49px;
+                width: 140px;
+                position: relative;
+                display: flex;
+                gap: 6px;
+                .loan {
+                    display: block;
+                    width: 56px;
+                    height: 49px;
+                }
+                .txtGrp {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: center;
+                    gap: 6px;
+                    white-space: nowrap;;
+                    .txt1 {
+                        color: $colorK1;
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 100%;
+                    }
+                    .num {
+                        color: $colorAR;
+                        font-family: Outfit;
+                        font-size: 28px;
+                        font-weight: 400;
+                        line-height: 100%; /* 28px */                    
+                    }
+                    .txt2 {
+                        color: $colorAR;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 100%; /* 14px */                    
+                        margin-left: -2px;
+                    }
+                    .zei {
+                        color: $colorK1;
+                        font-size: 8px;
+                        font-weight: 500;
+                        line-height: 100%; /* 8px */
+                        position: absolute;
+                        inset: 22px 12px auto auto;        
+                    }
+                }
+            }
+            .comment1 {
+                display: block;
+                height: 6px;
+                color: $colorK1;
+                font-size: 9px;
+                font-weight: 500;
+                line-height: 6px;
+                position: absolute;
+                bottom: 16px;
+                left: 16px;
+            }
+        }
+
+    }
+    .scroll {
+        width: 100%;
+        height: 22px;
+        margin-top: auto;
+        background: $colorM1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .16em;
+        &::before, &::after {
+            content: '';
+            display: block;
+            width: 7px;
+            height: 7px;
+            margin-bottom: -1px;
+            background: currentColor;
+            mask: url(../img/child-orthodontics/arw_sc.svg) center/contain no-repeat;
+        }
+        &::after {
+            margin-left: -.16em;
+        }
+    }
+    #sec1 {
+        overflow: hidden;
+    }
+}
+
