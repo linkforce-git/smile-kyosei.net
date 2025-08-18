@@ -17793,7 +17793,8 @@ body.child-plan #sec1 {
   right: 5.7142857143%;
   bottom: 20px;
 }
-.columnList .txtBox p.txt {
+.columnList .txtBox p.txt,
+.columnList .txtBox div.txt > p {
   margin: -5px -0.1em -6px 0;
   text-align: justify;
   font-size: 15px;
@@ -17805,13 +17806,15 @@ body.child-plan #sec1 {
   overflow: hidden;
 }
 @media (min-width: 768px ) {
-  .columnList .txtBox p.txt {
+  .columnList .txtBox p.txt,
+.columnList .txtBox div.txt > p {
     font-family: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     font-weight: 500;
   }
 }
 @media (max-width: 767px ) {
-  .columnList .txtBox p.txt {
+  .columnList .txtBox p.txt,
+.columnList .txtBox div.txt > p {
     font-family: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
   }
 }
@@ -19303,4 +19306,100 @@ body.column .btnColumnLink a::after {
   inset: 0 23px 0 auto;
   margin: auto 0;
   z-index: 2;
+}
+
+body.encyclopedia {
+  /*
+      #firstView1 {
+          .breadcrumbs {
+              z-index: 1;
+          }
+          >.wrapper {
+              padding-top: calc( 200px + 30px );
+          }
+          .pic {
+              height: calc( 200px + 30px );
+          }
+          .txtBox {
+              &::before {
+                  height: 200px;
+                  background: linear-gradient(rgba(248, 248, 245, 0.1)) center center / 100% 100% no-repeat;
+                  background: linear-gradient(rgba(248, 248, 245, 0), rgba(248, 248, 245, 0.3), rgba(248, 248, 245, 1)) center center / 100% 100% no-repeat;
+                  top: -200px;
+              }
+              .pageTitle {
+                  margin-top: -85px;
+              }
+
+          }
+      }
+  */
+}
+body.encyclopedia section.secSearch {
+  padding-top: 40px;
+}
+body.encyclopedia section.secSearch #searchForm {
+  position: relative;
+  height: 50px;
+}
+body.encyclopedia section.secSearch #searchForm #searchBox {
+  width: 100%;
+  height: 50px;
+  padding: 0 60px 0 20px;
+  color: #1d170e;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  background: #f8f8f5;
+  border: 1px solid #ebe8e1;
+  border-radius: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+}
+body.encyclopedia section.secSearch #searchForm #searchBtnArea {
+  height: 50px;
+  position: absolute;
+  inset: auto 16px auto auto;
+  background: none;
+  color: #666;
+  border: none;
+  outline: 0;
+}
+body.encyclopedia section.secSearch #searchForm #searchBtnArea svg {
+  display: block;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  inset: auto 0 auto auto;
+  fill: #666;
+}
+body.encyclopedia .categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+body.encyclopedia .categoryList > li {
+  display: block;
+  aspect-ratio: 1/1;
+  width: 31.4285714286%;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 1px 0 rgba(64, 59, 53, 0.2);
+  text-align: center;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
+body.encyclopedia .categoryList > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+body.encyclopedia .highlight {
+  background-color: #ffff00;
 }

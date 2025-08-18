@@ -1,8 +1,8 @@
 <div class="authorArea">
     <p class="authorHead"><span>記事の監修者</span></p>
     <picture>
-        <source srcset="/assets/img/column/author1.jpg.webp" type="image/webp">
-        <img class="authorImg" src="/assets/img/column/author1.jpg" alt="髙城秀典">
+        <source srcset="/assets/img/encyclopedia/author1.jpg.webp" type="image/webp">
+        <img class="authorImg" src="/assets/img/encyclopedia/author1.jpg" alt="髙城秀典">
     </picture>
     <p class="text1">院長</p>
     <h3 class="text2">髙城秀典</h3>

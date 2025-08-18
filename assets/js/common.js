@@ -894,6 +894,7 @@ $(function(){
 	$('form').on('keydown', 'input, button, select', function(e) {
 		if (e.keyCode == 13) {
 			if ($(this).attr('type') == 'submit') return;
+            if($(this).attr('id') == 'searchBox' ) return; // 検索ボックスは通常動作（=submit）
 
 			var form = $(this).closest('form');
 			var focusable = form.find('input, button[type="submit"], select, textarea')
