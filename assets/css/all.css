@@ -10801,6 +10801,11 @@ body.ortho .gap20 {
   flex-flow: column;
   gap: 20px;
 }
+body.ortho .gap16 {
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
 body.ortho .txta {
   margin: -5px -0.1em -6px 0;
   text-align: justify;
@@ -11927,8 +11932,12 @@ body.ortho .smileRecordWrap .plaque::before {
   left: 0;
   z-index: -1;
 }
+body.ortho .smileRecordWrap .otherRecord {
+  margin-top: -20px;
+}
 body.ortho .smileRecordWrap.inner {
   height: 560px;
+  height: 640px;
   padding: 48px 5.7142857143% 0;
   margin-top: 0;
   border-radius: 10px;
@@ -12268,6 +12277,9 @@ body.ortho .link_related {
   flex-flow: column;
   align-items: flex-end;
   gap: 10px;
+}
+body.ortho .link_related.mt0 {
+  margin-top: 0;
 }
 body.ortho .link_related .item {
   margin-right: -0.1em;
@@ -12859,7 +12871,8 @@ body#orthodontics #sec_column .columnList .item:nth-child(n+4) {
   display: none;
 }
 
-body#ortho_principle .pictxt {
+body#ortho_principle .pictxt,
+body#ortho_space_gaining .pictxt {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -12870,7 +12883,8 @@ body#ortho_principle .pictxt {
   align-items: center;
   gap: 10px;
 }
-body#ortho_principle .pictxt .note {
+body#ortho_principle .pictxt .note,
+body#ortho_space_gaining .pictxt .note {
   align-self: flex-end;
   margin: -3px -0.1em -3px 0;
   font-size: 10px;
@@ -12878,60 +12892,71 @@ body#ortho_principle .pictxt .note {
   letter-spacing: 0.1em;
 }
 @media (min-width: 768px ) {
-  body#ortho_principle .pictxt .note {
+  body#ortho_principle .pictxt .note,
+body#ortho_space_gaining .pictxt .note {
     font-family: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     font-weight: 500;
   }
 }
 @media (max-width: 767px ) {
-  body#ortho_principle .pictxt .note {
+  body#ortho_principle .pictxt .note,
+body#ortho_space_gaining .pictxt .note {
     font-family: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
   }
 }
-body#ortho_principle .pic_move5_4 {
+body#ortho_principle .pic_move5_4,
+body#ortho_space_gaining .pic_move5_4 {
   max-width: 350px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-body#ortho_principle .pic_move5_4 .pictxt {
+body#ortho_principle .pic_move5_4 .pictxt,
+body#ortho_space_gaining .pic_move5_4 .pictxt {
   width: 47.1428571429%;
   margin: 0;
   gap: 8px;
 }
-body#ortho_principle .pic_move5_4 .picb {
+body#ortho_principle .pic_move5_4 .picb,
+body#ortho_space_gaining .pic_move5_4 .picb {
   padding: 16px;
 }
-body#ortho_principle .pic_move5_4 .note {
+body#ortho_principle .pic_move5_4 .note,
+body#ortho_space_gaining .pic_move5_4 .note {
   font-size: 12px;
   line-height: 18px;
 }
-body#ortho_principle .pic_space2_1 {
+body#ortho_principle .pic_space2_1,
+body#ortho_space_gaining .pic_space2_1 {
   max-width: 350px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 3.4285714286%;
 }
-body#ortho_principle .pic_space2_1 .pica {
+body#ortho_principle .pic_space2_1 .pica,
+body#ortho_space_gaining .pic_space2_1 .pica {
   width: 55.7142857143%;
   margin: 0;
   flex: none;
 }
-body#ortho_principle .pic_space2_1 .note {
+body#ortho_principle .pic_space2_1 .note,
+body#ortho_space_gaining .pic_space2_1 .note {
   margin: -3px -0.1em -3px 0;
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0.1em;
 }
 @media (min-width: 768px ) {
-  body#ortho_principle .pic_space2_1 .note {
+  body#ortho_principle .pic_space2_1 .note,
+body#ortho_space_gaining .pic_space2_1 .note {
     font-family: YakuHanMPs, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     font-weight: 500;
   }
 }
 @media (max-width: 767px ) {
-  body#ortho_principle .pic_space2_1 .note {
+  body#ortho_principle .pic_space2_1 .note,
+body#ortho_space_gaining .pic_space2_1 .note {
     font-family: YakuHanMPs, "Hiragino Kaku Gothic ProN", "游ゴシック", sans-serif;
   }
 }

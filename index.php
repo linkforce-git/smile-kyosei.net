@@ -22,7 +22,6 @@
         "position": 2,
         "name": "歯列矯正のイロハ",
         "item": "https://www.smile-kyosei.test/knowledge/"
-    }]
     },{
         "@type": "ListItem",
         "position": 3,
@@ -52,7 +51,7 @@
                 <img src="/assets/img/orthodontics/h_whatis.jpg" alt="">
             </picture>
             <div class="en">WHAT IS</div>
-            <h1 class="ttl">歯が動く仕組み</h1>
+            <h1 class="ttl">テストページ</h1>
             <div class="sub">歯列矯正の原理をわかりやすく解説</div>
         </div>
         <div class="wrapper">

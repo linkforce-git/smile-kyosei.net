@@ -3,6 +3,7 @@ $ortho_msg = '';
 $caseCat_EN = (isset($_GET['mal'])) ? $_GET['mal'] : '';
 
 
+/*
 if (isset($caseCat_EN)) {
     switch($caseCat_EN) {
         case 'overbite':
@@ -45,3 +46,5 @@ if (isset($caseCat_EN)) {
 ?>
 
 <div class="banner" style="padding: 50px 0;"><?= $ortho_msg ?>バナー表示</div>
+*/
+

@@ -1,4 +1,7 @@
 <?php
+// $caseCat['applicable_cases']：「矯正できる歯並び ／矯正できない歯並び」のページ用
+//
+// 
     require_once(__DIR__."/define.php");
 
     if (!isset($caseCat)) {
@@ -7,9 +10,24 @@
         $caseCat += array_map(fn($cat) => false, CASE_CAT_DEFAULT);
     }
 
+    // 「矯正できる歯並び ／矯正できない歯並び」ページ用
+    if (!isset($applicable_cases)) {
+        $applicable_cases = false;
+    } else {
+        $caseCat = array_map(fn($cat) => false, CASE_CAT_DEFAULT);
+    }
+
+    // 「歯列スペースの確保様式」ページ用
+    if (!isset($space_gaining)) {
+        $space_gaining = false;
+    } else {
+        $caseCat = array_map(fn($cat) => false, CASE_CAT_DEFAULT);
+    }
+
+
     if (!isset($caseLimit)) $caseLimit = 10;
     if (!isset($casePage)) $casePage = 1;
-    $caseCount = 0;
+    if (!isset($caseCount)) $caseCount = 0;
 ?>
             <ul class="caseList">
 <?php if ($caseCat['overbite'] && in_page()): $setup_ref_id = '7188'; ?>
@@ -88,9 +106,9 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if ($caseCat['spacing'] && in_page()): $setup_ref_id = '7194'; ?>
+<?php if (($caseCat['spacing'] || $applicable_cases == 'openbite') && in_page()): $setup_ref_id = '7194'; ?>
                 <li class="caseBox">
-                    <h3 class="ttl">すきっ歯</h3>
+                    <h3 class="ttl">すきっ歯・前歯が閉じない</h3>
                     <div class="be_af_unit">
                         <div class="unit_ttl">BEFORE &amp; AFTER</div>
                         <input type="checkbox" id="orthoCase<?= $caseCount ?>" class="be_af_tgl">
@@ -113,7 +131,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if ($caseCat['crowding'] && in_page()): $setup_ref_id = '6918'; ?>
+<?php if (($caseCat['crowding'] || $space_gaining == 'space_shortage') && in_page()): $setup_ref_id = '6918'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">デコボコ歯</h3>
                     <div class="be_af_unit">
@@ -138,7 +156,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if ($caseCat['overbite'] && in_page()): $setup_ref_id = '7342'; ?>
+<?php if (($caseCat['overbite'] || $applicable_cases == 'overbite') && in_page()): $setup_ref_id = '7342'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">出っ歯</h3>
                     <div class="be_af_unit">
@@ -213,7 +231,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if (($caseCat['openbite'] || $caseCat['crowding']) && in_page()): $setup_ref_id = '6920'; ?>
+<?php if (($caseCat['openbite'] || $caseCat['crowding'] || $applicable_cases == 'crowding' || $applicable_cases == 'openbite') && in_page()): $setup_ref_id = '6920'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">前歯が閉じない・デコボコ歯</h3>
                     <div class="be_af_unit">
@@ -238,7 +256,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if ($caseCat['crossbite'] && in_page()): $setup_ref_id = '7066'; ?>
+<?php if (($caseCat['crossbite'] || $applicable_cases == 'crossbite') && in_page()): $setup_ref_id = '7066'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">噛み合わせのズレ</h3>
                     <div class="be_af_unit">
@@ -263,7 +281,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if ($caseCat['underbite'] && in_page()): $setup_ref_id = '7036'; ?>
+<?php if (($caseCat['underbite'] || $applicable_cases == 'underbite') && in_page()): $setup_ref_id = '7036'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">受け口</h3>
                     <div class="be_af_unit">
@@ -364,7 +382,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if ($caseCat['spacing'] && in_page()): $setup_ref_id = '6840'; ?>
+<?php if (($caseCat['spacing'] || $applicable_cases == 'spacing') && in_page()): $setup_ref_id = '6840'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">すきっ歯</h3>
                     <div class="be_af_unit">
@@ -489,7 +507,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if ($caseCat['underbite'] && in_page()): $setup_ref_id = '7096'; ?>
+<?php if (($caseCat['underbite'] || $applicable_cases == 'underbite') && in_page()): $setup_ref_id = '7096'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">受け口</h3>
                     <div class="be_af_unit">
@@ -539,7 +557,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if ($caseCat['overbite'] && in_page()): $setup_ref_id = '6838'; ?>
+<?php if (($caseCat['overbite'] || $space_gaining == 'space_shortage') && in_page()): $setup_ref_id = '6838'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">出っ歯</h3>
                     <div class="be_af_unit">
@@ -614,7 +632,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if (($caseCat['crowding'] || $caseCat['edge-to-edge']) && in_page()): $setup_ref_id = '7061'; ?>
+<?php if (($caseCat['crowding'] || $caseCat['edge-to-edge'] || $applicable_cases == 'crowding' || $applicable_cases == 'edge-to-edge' || $space_gaining == 'space_shortage') && in_page()): $setup_ref_id = '7061'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">デコボコ歯・前歯がぶつかる</h3>
                     <div class="be_af_unit">
@@ -740,7 +758,7 @@
                 </li>
 <?php endif; ?>
 
-<?php if (($caseCat['midline-shift'] || $caseCat['crossbite']) && in_page()): $setup_ref_id = '7027'; ?>
+<?php if (($caseCat['midline-shift'] || $caseCat['crossbite'] || $applicable_cases == 'midline-shift') && in_page()): $setup_ref_id = '7027'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">中心のズレ・嚙み合わせのズレ</h3>
                     <div class="be_af_unit">
@@ -815,7 +833,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if (($caseCat['overbite'] || $caseCat['spacing']) && in_page()): $setup_ref_id = '7208'; ?>
+<?php if (($caseCat['overbite'] || $caseCat['spacing'] || $applicable_cases == 'spacing') && in_page()): $setup_ref_id = '7208'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">出っ歯・すきっ歯</h3>
                     <div class="be_af_unit">
@@ -865,7 +883,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if (($caseCat['overbite'] || $caseCat['deepbite']) && in_page()): $setup_ref_id = '6795'; ?>
+<?php if (($caseCat['overbite'] || $caseCat['deepbite'] || $applicable_cases == 'deepbite') && in_page()): $setup_ref_id = '6795'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">出っ歯・深い噛み合わせ</h3>
                     <div class="be_af_unit">
@@ -915,7 +933,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if (($caseCat['overbite'] || $caseCat['bimaxillary-protrusion']) && in_page()): $setup_ref_id = '7046b'; ?>
+<?php if (($caseCat['overbite'] || $caseCat['bimaxillary-protrusion'] || $applicable_cases == 'bimaxillary-protrusion') && in_page()): $setup_ref_id = '7046b'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">口ゴボ・出っ歯</h3>
                     <div class="be_af_unit">
@@ -965,7 +983,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if (($caseCat['deepbite'] ) && in_page()): $setup_ref_id = '7266'; ?>
+<?php if (($caseCat['deepbite'] || $applicable_cases == 'deepbite') && in_page()): $setup_ref_id = '7266'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">深い噛み合わせ</h3>
                     <div class="be_af_unit">
@@ -1015,7 +1033,7 @@
                     <div class="noteBox"><?= CASE_NOTE_BASIC ?></div>
                 </li>
 <?php endif; ?>
-<?php if (($caseCat['overbite']) && in_page()): $setup_ref_id = '7293'; ?>
+<?php if (($caseCat['overbite'] || $applicable_cases == 'overbite') && in_page()): $setup_ref_id = '7293'; ?>
                 <li class="caseBox">
                     <h3 class="ttl">出っ歯</h3>
                     <div class="be_af_unit">

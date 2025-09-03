@@ -175,6 +175,36 @@
         </div>
     </section>
 
+
+<?php // カテゴリ別記事一覧  ?>
+    <section>
+        <div class="wrapper">
+<?php if ($cat_slug == ''): ?>
+    <?php foreach( $categories as $category ) : ?>
+            <h2 class="secTitle"><span>「<?= $category->name ?>」に関する記事<?php if ($paged !== 1) echo ' ('.$paged.'/'.$max_pages.')'; ?></span><svg><use xlink:href='#smile'></use></svg></h2>
+<?php if (have_posts() && in_category( $category->term_id )): ?>
+<?php   while (have_posts()): the_post(); ?>
+            <ul class="columnList">
+<?php
+            $post_cat = get_the_terms(get_the_ID(), 'category');
+            $thumb_url = has_post_thumbnail() ? get_the_post_thumbnail_url() : '/assets/img/column/fv.jpg';
+?>
+                <li class="item">
+                    <div class="txtBox">
+                        <h3 class="columnTitle"><a class="titleLink" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <p class="txt"><?= esc_html(str_replace(PHP_EOL, '', post_custom('overview'))); ?></p>
+                        <div class="category"><?= esc_html($post_cat[0]->name); ?></div>
+                    </div>
+                </li>
+            </ul>
+<?php   endwhile; ?>
+<?php else: ?>
+    <div style="margin-bottom: 50px;">このテーマに関する記事はありません。</div>
+<?php endif; ?>
+    <?php endforeach; ?>
+<?php endif; ?>
+        </div>
+    </section>
 </main>
 
 <?php include(__DIR__."/../../../../include/footer.php"); ?>

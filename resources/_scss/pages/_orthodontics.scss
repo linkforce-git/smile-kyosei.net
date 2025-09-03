@@ -625,6 +625,11 @@ body.ortho {
         flex-flow: column;
         gap: 20px;
     }
+    .gap16 {
+        display: flex;
+        flex-flow: column;
+        gap: 16px;
+    }
 
     .txta {
         margin: -5px -.1em -6px 0;
@@ -1714,8 +1719,12 @@ body.ortho {
                 z-index: -1;
             }
         }
+        .otherRecord {
+            margin-top: -20px;
+        }
         &.inner {
             height: 560px;
+            height: 640px;
             padding: 48px calc(20 / 350 * 100%) 0;
             margin-top: 0;
             border-radius: 10px;
@@ -2045,6 +2054,9 @@ body.ortho {
         flex-flow: column;
         align-items: flex-end;
         gap: 10px;
+        &.mt0 {
+            margin-top: 0;
+        }
         .item {
             margin-right: -.1em;
             width: fit-content;
@@ -2599,7 +2611,8 @@ body#orthodontics {
     }
 }
 
-body#ortho_principle {
+body#ortho_principle,
+body#ortho_space_gaining {
     .pictxt {
         width: fit-content;
         max-width: 100%;

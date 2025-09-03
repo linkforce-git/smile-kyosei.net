@@ -95,7 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </a>
                             </p>
                             <p class="item">
-                                <a id="menu-smile_ortho-cost_reasons" class="navHead3 btn_underline" href="/smile_ortho/cost_reasons">
+                                <a id="menu-smile_ortho-price_commitment" class="navHead3 btn_underline" href="/smile_ortho/price_commitment">
                                     <span class="text1">安さの理由</span>
                                     <svg class="icon1"><use xlink:href='#arrow_right'></use></svg>
                                 </a>
@@ -165,7 +165,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </a>
                             </p>
                             <p class="item">
-                                <a id="menu-knowledge-mouthpiece" class="navHead3 btn_underline" href="/knowledge/mouthpiece">
+                                <a id="menu-knowledge-mouthpiece" class="navHead3 btn_underline" href="/knowledge/about_mouthpiece">
                                     <span class="text1">マウスピース矯正とは？</span>
                                     <svg class="icon1"><use xlink:href='#arrow_right'></use></svg>
                                 </a>
